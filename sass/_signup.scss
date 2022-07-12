@@ -1,0 +1,68 @@
+.heading-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  color: $color-primary-dark;
+  font-weight: 600;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+
+  &-container {
+    border: 1px solid $color-primary-light;
+    padding: 2rem 5rem 5rem;
+    border-radius: 5rem;
+    margin-top: 5rem;
+    width: 50rem;
+  }
+}
+
+.form-input,
+.account-details {
+  font-size: 1.6rem;
+  font-family: inherit;
+
+  padding: 1rem 0 1rem 0.5rem;
+  color: $color-secondary-dark;
+  border-radius: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: 1px solid $color-primary-dark;
+
+  &::-webkit-input-placeholder {
+    color: $color-secondary-dark;
+  }
+}
+
+.our__logo {
+  margin-right: 1.5rem;
+}
+
+// .signup__option {
+
+// }
+
+.signup__option {
+  padding: 0 0.5rem 0 0;
+  display: flex;
+  //   justify-content: space-between;
+}
+
+#account-type {
+  border: none;
+  background-color: inherit;
+  color: $color-primary;
+  font-size: 1.5rem;
+  //   width: 10rem;
+
+  &:focus,
+  &:active {
+    border: none;
+  }
+}
