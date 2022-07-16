@@ -39,6 +39,11 @@ body {
   align-content: center;
   //   font-family: 'Marcellus', serif;
   // font-family: 'Saira Condensed', sans-serif;
+
+  @media only screen and (max-width: 37.5em) {
+    line-height: 2;
+    padding: 0;
+  }
 }
 
 .icon {
