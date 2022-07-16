@@ -6,11 +6,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: 1rem 1rem 10rem $color-whitish-green;
-
-  //after successful login, it should disappear
-
-  opacity: 0;
-  display: none;
 }
 a {
   text-decoration: none;
@@ -161,10 +156,14 @@ a {
   background-color: $color-primary;
 }
 
-// .main {
-//   display: none;
-//   opacity: 0;
-// }
+body {
+  transition: all 1s ease-in;
+}
+
+.main {
+  animation: moveInRight 0.5s ease-in;
+  backface-visibility: hidden;
+}
 
 body {
   position: relative;
@@ -179,7 +178,6 @@ body {
   animation: moveInLeft 1s ease-out;
   position: absolute;
   top: 0;
-  width: 65%;
   height: 100%;
   opacity: 0;
   z-index: 1000;
@@ -283,14 +281,14 @@ body {
 }
 
 .greetings {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .balance__container {
   background-color: $color-red;
   width: max-content;
   font-size: 1.8rem;
-  padding: 1rem 2rem 2rem;
+  padding: 2rem 2rem 2rem;
   border-radius: 2rem;
   // color: rgb(91, 34, 105);
   color: #fff;
@@ -378,9 +376,9 @@ body {
     margin: 0 1rem 1rem 0;
   }
 
-  // .nav {
-  //   opacity: 0;
-  // }
+  .nav {
+    width: 80%;
+  }
 
   .home-page {
     border: none;
@@ -418,15 +416,8 @@ body {
     }
   }
 
-  .active-header {
-    color: $color-primary;
-  }
-
   .display-greetings-bar {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 1rem 1rem;
-    line-height: 1.2;
+    padding: 1rem 0 2rem 1rem;
   }
 
   .greetings {
@@ -434,32 +425,10 @@ body {
   }
 
   .balance__container {
-    background-color: $color-red;
-    width: max-content;
-    font-size: 1.8rem;
     padding: 1rem 2rem 2rem;
-    border-radius: 2rem;
-    // color: rgb(91, 34, 105);
-    color: #fff;
-    text-shadow: 10rem 10rem 10rem red;
-    margin: 0 auto 2rem;
-  }
-
-  .statistics__content {
+    height: 12rem;
     display: flex;
-    justify-content: center;
-  }
-
-  // Styles for the incomplete page
-  .incomplete__container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-  }
-
-  .index-page {
-    color: $color-primary-dark;
+    justify-content: space-between;
   }
 }

@@ -8,6 +8,16 @@
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::before,
 *::after {
@@ -44,9 +54,7 @@ body {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 1rem 1rem 10rem #026b3e52;
-  opacity: 0;
-  display: none; }
+  box-shadow: 1rem 1rem 10rem #026b3e52; }
 
 a {
   text-decoration: none; }
@@ -165,6 +173,13 @@ a {
   background-color: #447f66; }
 
 body {
+  transition: all 1s ease-in; }
+
+.main {
+  animation: moveInRight 0.5s ease-in;
+  backface-visibility: hidden; }
+
+body {
   position: relative;
   z-index: 100; }
 
@@ -176,7 +191,6 @@ body {
   animation: moveInLeft 1s ease-out;
   position: absolute;
   top: 0;
-  width: 65%;
   height: 100%;
   opacity: 0;
   z-index: 1000; }
@@ -252,13 +266,13 @@ body {
   line-height: 1.2; }
 
 .greetings {
-  font-size: 2rem; }
+  font-size: 2.2rem; }
 
 .balance__container {
   background-color: rgba(235, 31, 109, 0.753);
   width: max-content;
   font-size: 1.8rem;
-  padding: 1rem 2rem 2rem;
+  padding: 2rem 2rem 2rem;
   border-radius: 2rem;
   color: #fff;
   text-shadow: 10rem 10rem 10rem red;
@@ -315,6 +329,8 @@ body {
     transition: all 1s;
     width: 100%;
     margin: 0 1rem 1rem 0; }
+  .nav {
+    width: 80%; }
   .home-page {
     border: none;
     height: 100vh;
@@ -337,35 +353,16 @@ body {
       padding: 0.5rem; }
     .actionbar__text {
       margin-top: -0.5rem; }
-  .active-header {
-    color: #447f66; }
   .display-greetings-bar {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 1rem 1rem;
-    line-height: 1.2; }
+    padding: 1rem 0 2rem 1rem; }
   .greetings {
     font-size: 2rem; }
   .balance__container {
-    background-color: rgba(235, 31, 109, 0.753);
-    width: max-content;
-    font-size: 1.8rem;
     padding: 1rem 2rem 2rem;
-    border-radius: 2rem;
-    color: #fff;
-    text-shadow: 10rem 10rem 10rem red;
-    margin: 0 auto 2rem; }
-  .statistics__content {
+    height: 12rem;
     display: flex;
-    justify-content: center; }
-  .incomplete__container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center; }
-  .index-page {
-    color: #2f7557; } }
+    justify-content: space-between; } }
 
 .heading-secondary {
   display: flex;
