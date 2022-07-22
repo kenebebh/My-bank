@@ -39,3 +39,17 @@ loginButton.addEventListener("click", function (e) {
   e.preventDefault();
   displayHomepage();
 });
+
+const displayLoginPage = function () {
+  loginPage.classList.remove("hidden");
+  body.classList.add("hidden");
+  body.style.opacity = 0;
+};
+
+document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+  if (e.key === "Escape" && !body.classList.contains("hidden")) {
+    displayLoginPage();
+    closeOverlay();
+  }
+});
