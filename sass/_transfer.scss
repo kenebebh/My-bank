@@ -1,0 +1,93 @@
+.transfer__container {
+  border: 1px solid $color-whitish-green;
+  height: 95vh;
+  padding: 0 5rem 0;
+  border-radius: 2rem;
+  position: relative;
+  width: 50rem;
+  overflow: hidden;
+}
+
+.info-header {
+  text-transform: uppercase;
+  color: white;
+  line-height: 2;
+  font-size: 2.2rem;
+  margin: 0 auto 3rem;
+}
+
+.pin-box__container {
+  //   border: 1px solid $color-whitish-green;
+  padding: 1rem 2rem 3rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  //   background-color: $color-primary;
+  //   background: radial-gradient(#53ac87f1, #2d805dd0);
+  background: radial-gradient(#53ac87f1, 60%, #236b4dd0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.home-page__nav {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+}
+
+.create-pin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+}
+
+.pin {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid $color-secondary-dark;
+  border-radius: 5px;
+  box-shadow: 0 0.01rem 10rem rgba($color-black, 0.4);
+
+  &:active,
+  &:focus {
+    border: 1px solid $color-secondary-dark;
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgb(54, 52, 52);
+  }
+}
+
+.setpin-button {
+  margin: 4rem 0 0;
+  width: 65%;
+  height: 4rem;
+  font-family: inherit;
+  background: linear-gradient(to bottom right, #4bc59279, $color-secondary);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0.01rem 2rem rgba($color-black, 0.4);
+  transition: all 1s;
+  color: whitesmoke;
+  font-size: 1.7rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

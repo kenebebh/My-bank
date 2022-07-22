@@ -11,6 +11,11 @@
 
     <link rel="stylesheet" href="css/style.css">
     <title>Sign up page</title>
+    <script defer>
+       let signUpButton = document.querySelector('.signup-button')
+
+    </script>
+
 </head>
 <body>
     <div class="signup-container">
@@ -23,8 +28,8 @@
             <input type="text" placeholder="First name" class="form-input">
             <input type="text" placeholder="Last name" class="form-input">
             <input type="text" placeholder="Create username" class="form-input">
-            <input type="password" name="password" id="password" class="form-input user-password" placeholder="Password"> 
-            <input type="password" name="password" id="password" placeholder="Confirm password" class="form-input user-password-confirm">
+            <input type="password" name="password" id="password1" class="form-input user-password" placeholder="Password"> 
+            <input type="password" name="password" id="password2" placeholder="Confirm password" class="form-input user-password-confirm">
 
             <div class="account-details">
                 <label for="account-type" class="signup__option">Account type: 
@@ -34,7 +39,7 @@
                     </label>
             </div>
             
-            <a href="" class="signup-button">Sign up</a>
+            <a href="index.html" class="signup-button" id="signup-button">Sign up</a>
         </form>
     </div>
 </body>

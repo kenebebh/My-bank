@@ -1,11 +1,12 @@
 .login-page {
   padding: 5rem 10rem;
-  border-radius: 10rem;
+  border-radius: 3rem;
   height: 70vh;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
   box-shadow: 1rem 1rem 10rem $color-whitish-green;
+  overflow-y: scroll;
 }
 a {
   text-decoration: none;
@@ -68,14 +69,18 @@ a {
   margin-left: 1rem;
 }
 
-.login-button,
-.login-2 {
+.login-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-button {
   cursor: pointer;
-  width: 50%;
+  width: 87%;
   font-size: 1.6rem;
   font-family: inherit;
-  margin: 2rem auto 0;
-  padding: 0.7rem 0 1rem;
+  margin: 2rem 0 0;
+  padding: 1rem 0;
   color: $color-primary-dark;
   background-color: $color-secondary;
   border-radius: 0.5rem;
@@ -93,19 +98,30 @@ a {
 }
 
 .login-2 {
-  margin: 0 auto 2rem;
-  padding: 0.5rem 0 1rem;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  cursor: pointer;
+  margin: 2rem 0 0;
+  padding-right: 1rem;
+  background-color: $color-secondary;
+  border-radius: 0.5rem;
+  border: 1px solid grey;
+  box-shadow: 0.1rem 0.1rem 20rem #729787af;
+  transition: transform 0.5s ease-out;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 .login-cta {
   &__container {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    margin-top: 3rem;
   }
 
   &__options {
@@ -121,8 +137,12 @@ a {
 }
 
 .login__link {
-  color: black;
+  color: rgb(36, 35, 35);
   font-size: 1.5rem;
+  margin-left: 2rem;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-color: $color-secondary-dark;
 }
 
 .login--footer {
@@ -130,6 +150,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   transition: all 0.1s;
+  line-height: 1;
 
   & > p {
     margin: 1rem;
@@ -141,6 +162,14 @@ a {
       transform: scale(1.03);
     }
   }
+}
+
+.privacy {
+  color: rgb(59, 59, 59);
+  text-decoration: underline;
+  letter-spacing: 0.1rem;
+  text-decoration-color: $color-secondary-dark;
+  margin-top: -2rem;
 }
 
 .container {
@@ -163,6 +192,7 @@ body {
 .main {
   animation: moveInRight 0.5s ease-in;
   backface-visibility: hidden;
+  overflow-y: scroll;
 }
 
 body {
@@ -172,7 +202,7 @@ body {
 
 .nav {
   background-color: $color-primary;
-  padding: 3rem 5rem 5rem 3rem;
+  padding: 1rem 5rem 5rem 3rem;
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
   animation: moveInLeft 1s ease-out;
@@ -225,19 +255,22 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .home-page {
   border: 1px solid $color-whitish-green;
-  height: 95vh;
-  padding: 3rem 5rem 0;
-  border-radius: 5rem;
+  padding: 1rem 5rem 0;
+  border-radius: 2rem;
 
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(207, 206, 206, 0.349);
+    // border-bottom: 1px solid $color-whitish-green;
+    margin: 0 -5rem;
+    padding: 0 5rem;
 
     &--icon {
       fill: $color-primary-dark;
@@ -267,6 +300,7 @@ body {
 
   &__text {
     margin-top: -0.5rem;
+    color: rgb(49, 48, 48);
   }
 }
 
@@ -277,7 +311,7 @@ body {
 .display-greetings-bar {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0 1rem 1rem;
+  padding: 2rem 0 1rem 1rem;
   line-height: 1.2;
 }
 
@@ -286,8 +320,8 @@ body {
 }
 
 .balance__container {
-  background-color: $color-red;
-  width: max-content;
+  background-color: $color-secondary;
+  width: 70%;
   font-size: 1.8rem;
   padding: 2rem 2rem 2rem;
   border-radius: 2rem;
