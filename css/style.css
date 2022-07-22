@@ -216,7 +216,7 @@ body {
   width: 90%;
   height: 100%;
   opacity: 0;
-  z-index: 1000; }
+  z-index: 1500; }
   .nav__list {
     list-style: none; }
   .nav__item {
@@ -244,7 +244,7 @@ body {
   height: 100%;
   background-color: #72978762;
   backdrop-filter: blur(3px);
-  z-index: 200; }
+  z-index: 1200; }
 
 .hidden {
   display: none !important; }
@@ -325,6 +325,8 @@ body {
     height: 100vh;
     margin-top: 1rem;
     box-shadow: none; }
+  .top-nav__item {
+    line-height: 3; }
   .welcome-text {
     color: #447f66;
     letter-spacing: 0.1rem;
@@ -332,16 +334,8 @@ body {
     margin: 2rem 0 1rem; }
   .login {
     margin: 2rem 0; }
-  .login-icon {
-    margin-left: 0.5rem; }
-  .login-button,
-  .login-2 {
-    width: 80%; }
-  .login-2 {
-    margin: 0 auto 2rem;
-    width: 80%; }
-  .login-cta__container {
-    justify-content: space-between; }
+  .login-button {
+    width: 85%; }
   .login--footer {
     margin: 2rem 0 0; }
   .location-icon {
@@ -540,6 +534,10 @@ body {
     transform: translateY(-0.2rem); }
   .setpin-button:active {
     transform: translateY(0); }
+
+.transfer-type__option {
+  display: flex;
+  align-items: center; }
 
 .heading__tertiary {
   font-family: "Saira Condensed", sans-serif;
