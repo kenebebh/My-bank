@@ -33,7 +33,6 @@ const displayHomepage = function () {
   loginPage.classList.add("hidden");
   body.classList.remove("hidden");
   body.style.opacity = 100;
-  console.log("home page displaying");
 };
 
 loginButton.addEventListener("click", function (e) {

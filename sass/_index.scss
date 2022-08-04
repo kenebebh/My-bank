@@ -260,7 +260,7 @@ body {
 
 .home-page {
   border: 1px solid $color-whitish-green;
-  padding: 1rem 5rem 0;
+  padding: 1rem 2rem 0;
   border-radius: 2rem;
 
   &__nav {
@@ -268,9 +268,6 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(207, 206, 206, 0.349);
-    // border-bottom: 1px solid $color-whitish-green;
-    margin: 0 -5rem;
-    padding: 0 5rem;
 
     &--icon {
       fill: $color-primary-dark;
