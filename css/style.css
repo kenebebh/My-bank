@@ -569,6 +569,10 @@ body {
   padding: 5rem 7rem;
   margin-bottom: 1rem; }
 
+@media only screen and (max-width: 37.5em) {
+  .transfer__container {
+    width: 100%; } }
+
 .heading__tertiary {
   font-family: "Saira Condensed", sans-serif;
   text-transform: uppercase; }
