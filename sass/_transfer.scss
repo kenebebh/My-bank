@@ -323,7 +323,8 @@
     height: 100vh;
     margin: 0 auto;
     left: 0;
-    // transform: translateX(1%);
+    border: none;
+    border-radius: 0;
   }
 
   .transfer-page__nav {
