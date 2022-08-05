@@ -26,7 +26,7 @@
 
                     <h2 class="active-header">Transfer money</h2>
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" class="home-page__nav--icon nav--icon-1">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" class="home-page__nav--icon back-button">
                         <title>back</title>
                         <path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
                         </svg>
@@ -151,11 +151,38 @@
                     </button>
             </div>
         </section>
-        </div>
 
         <section class="transfer transfer-page5 transfer-successful" data-tab="5">
-            
+            <div class="successful-container">
+                <div class="icon-container">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 20 20" class="successful-icon">
+                        <title>check</title>
+                        <path d="M8.294 16.998c-0.435 0-0.847-0.203-1.111-0.553l-3.573-4.721c-0.465-0.613-0.344-1.486 0.27-1.951 0.615-0.467 1.488-0.344 1.953 0.27l2.351 3.104 5.911-9.492c0.407-0.652 1.267-0.852 1.921-0.445s0.854 1.266 0.446 1.92l-6.984 11.21c-0.242 0.391-0.661 0.635-1.12 0.656-0.022 0.002-0.042 0.002-0.064 0.002z"></path>
+                        </svg>
+                </div>
+
+                <div class="successful-text">
+                    Transaction successful
+                </div>
+            </div>
         </section>
+
+        <section class="transfer transfer-page6 transfer-unsuccessful" data-tab="6">
+            <div class="unsuccessful-container">
+                <div class="icon-container">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="unsuccessful-icon">
+                        <title>circle-with-cross</title>
+                        <path d="M10 1.6c-4.639 0-8.4 3.761-8.4 8.4s3.761 8.4 8.4 8.4 8.4-3.761 8.4-8.4c0-4.639-3.761-8.4-8.4-8.4zM14.789 13.061l-1.729 1.729-3.060-3.061-3.061 3.060-1.729-1.729 3.062-3.060-3.061-3.061 1.729-1.728 3.060 3.060 3.061-3.061 1.729 1.729-3.062 3.061 3.061 3.061z"></path>
+                        </svg>
+                </div>
+
+                <div class="unsuccessful-text">
+                    Transaction unsuccessful
+                </div>
+            </div>
+        </section>
+        </div>
+
         </div>
 </body>
 </html>
