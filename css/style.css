@@ -18,9 +18,6 @@
     opacity: 1;
     transform: translateX(0); } }
 
-.balance-heading {
-  color: red; }
-
 *,
 *::before,
 *::after {
@@ -46,6 +43,27 @@ body {
 .icon {
   font-size: 0.5rem;
   fill: #729787; }
+
+.balance__container {
+  background-color: rgba(6, 158, 145, 0.479);
+  width: 70%;
+  font-size: 1.8rem;
+  padding: 2rem 2rem 2rem;
+  border-radius: 2rem;
+  color: #fff;
+  text-shadow: 10rem 10rem 10rem red;
+  margin: 0 auto 2rem; }
+
+.balance-heading {
+  color: red; }
+
+@media only screen and (max-width: 37.5em) {
+  .balance__container {
+    padding: 1rem 2rem 2rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; } }
 
 .login-page {
   padding: 5rem 10rem;
@@ -299,16 +317,14 @@ body {
   font-size: 2.2rem; }
 
 .card-component {
-  display: flex;
-  flex-direction: column;
   background-color: #447f66;
   width: 90%;
   font-size: 1.8rem;
-  padding: 1rem 2rem;
+  padding: 0 2rem 1rem;
   border-radius: 2rem;
   color: #fff;
-  margin: 1rem auto 2rem;
-  height: 28rem;
+  margin: 0 auto 2rem;
+  height: fit-content;
   position: relative; }
 
 .bank-name {
@@ -320,6 +336,7 @@ body {
   margin-left: -2rem; }
 
 .chip {
+  margin-top: -1rem;
   width: 5rem;
   height: 4rem; }
 
@@ -338,23 +355,13 @@ body {
 
 .card-logo {
   width: 8rem;
-  height: 5rem; }
+  height: 4.5rem; }
 
 .card-account-balance {
   position: absolute;
   right: 3rem;
   top: 20%;
   font-size: 2rem; }
-
-.balance__container {
-  background-color: rgba(6, 158, 145, 0.479);
-  width: 70%;
-  font-size: 1.8rem;
-  padding: 2rem 2rem 2rem;
-  border-radius: 2rem;
-  color: #fff;
-  text-shadow: 10rem 10rem 10rem red;
-  margin: 0 auto 2rem; }
 
 .statistics__content {
   display: flex;
@@ -380,7 +387,8 @@ body {
   .top-nav__item {
     line-height: 3; }
   .card-component {
-    height: auto; }
+    height: auto;
+    margin: 0 auto 2rem; }
   .welcome-text {
     color: #447f66;
     letter-spacing: 0.1rem;
@@ -428,15 +436,9 @@ body {
     .actionbar__text {
       margin-top: -0.5rem; }
   .display-greetings-bar {
-    padding: 1rem 0 2rem 1rem; }
+    padding: 1rem 0 1rem 1rem; }
   .greetings {
-    font-size: 2rem; }
-  .balance__container {
-    padding: 1rem 2rem 2rem;
-    height: 12rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; } }
+    font-size: 2rem; } }
 
 @media only screen and (max-width: 23.5em) {
   .welcome-text {

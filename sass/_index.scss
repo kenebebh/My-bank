@@ -326,8 +326,6 @@ body {
 }
 
 .card-component {
-  display: flex;
-  flex-direction: column;
   background-color: $color-primary;
   width: 90%;
   font-size: 1.8rem;
@@ -335,7 +333,8 @@ body {
   border-radius: 2rem;
   color: #fff;
   margin: 0 auto 2rem;
-  height: 28rem;
+  // height: 28rem;
+  height: fit-content;
   position: relative;
 }
 
@@ -350,6 +349,7 @@ body {
 }
 
 .chip {
+  margin-top: -1rem;
   width: 5rem;
   height: 4rem;
 }
@@ -372,7 +372,7 @@ body {
 
 .card-logo {
   width: 8rem;
-  height: 5rem;
+  height: 4.5rem;
 }
 
 .card-account-balance {
@@ -416,7 +416,7 @@ body {
 
   .card-component {
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
   }
 
   .welcome-text {
@@ -495,7 +495,7 @@ body {
   }
 
   .display-greetings-bar {
-    padding: 1rem 0 0 1rem;
+    padding: 1rem 0 1rem 1rem;
   }
 
   .greetings {
