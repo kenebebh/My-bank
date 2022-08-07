@@ -172,7 +172,7 @@ a {
   margin-top: -2rem;
 }
 
-.container {
+.dashboard-container {
   transition: all 1s;
   width: 50rem;
   position: relative;
@@ -195,9 +195,12 @@ body {
   overflow-y: scroll;
 }
 
-body {
+.index-container {
   position: relative;
   z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
 }
 
 .nav {
@@ -322,16 +325,61 @@ body {
   font-size: 2.2rem;
 }
 
-.balance__container {
-  background-color: $color-secondary;
-  width: 70%;
+.card-component {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-primary;
+  width: 90%;
   font-size: 1.8rem;
-  padding: 2rem 2rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 2rem;
-  // color: rgb(91, 34, 105);
   color: #fff;
-  text-shadow: 10rem 10rem 10rem red;
-  margin: 0 auto 2rem;
+  margin: 1rem auto 2rem;
+  height: 28rem;
+  position: relative;
+}
+
+.bank-name {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.bank-logo {
+  margin-left: -2rem;
+}
+
+.chip {
+  width: 5rem;
+  height: 4rem;
+}
+
+.card-number {
+  width: 90%;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-name {
+  text-transform: uppercase;
+}
+
+.card-logo {
+  width: 8rem;
+  height: 5rem;
+}
+
+.card-account-balance {
+  position: absolute;
+  right: 3rem;
+  top: 20%;
+  font-size: 2rem;
 }
 
 .statistics__content {
@@ -366,6 +414,10 @@ body {
     line-height: 3;
   }
 
+  .card-component {
+    height: auto;
+  }
+
   .welcome-text {
     color: $color-primary;
     letter-spacing: 0.1rem;
@@ -395,7 +447,7 @@ body {
     width: 100%;
   }
 
-  .container {
+  .dashboard-container {
     transition: all 1s;
     width: 100%;
     margin: 0;
@@ -462,5 +514,9 @@ body {
   .welcome-text {
     font-size: 3.5rem;
     // line-height: 1;
+  }
+
+  .card-number {
+    letter-spacing: 0.3rem;
   }
 }

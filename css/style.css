@@ -18,6 +18,9 @@
     opacity: 1;
     transform: translateX(0); } }
 
+.balance-heading {
+  color: red; }
+
 *,
 *::before,
 *::after {
@@ -34,10 +37,7 @@ body {
   font-weight: 300;
   line-height: 3;
   font-size: 1.5rem;
-  font-family: "Oswald", sans-serif;
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center; }
+  font-family: "Oswald", sans-serif; }
   @media only screen and (max-width: 37.5em) {
     body {
       line-height: 2;
@@ -182,7 +182,7 @@ a {
   text-decoration-color: rgba(24, 114, 107, 0.479);
   margin-top: -2rem; }
 
-.container {
+.dashboard-container {
   transition: all 1s;
   width: 50rem;
   position: relative; }
@@ -201,9 +201,12 @@ body {
   backface-visibility: hidden;
   overflow-y: scroll; }
 
-body {
+.index-container {
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center; }
 
 .nav {
   background-color: #447f66;
@@ -295,6 +298,54 @@ body {
 .greetings {
   font-size: 2.2rem; }
 
+.card-component {
+  display: flex;
+  flex-direction: column;
+  background-color: #447f66;
+  width: 90%;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: #fff;
+  margin: 1rem auto 2rem;
+  height: 28rem;
+  position: relative; }
+
+.bank-name {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase; }
+
+.bank-logo {
+  margin-left: -2rem; }
+
+.chip {
+  width: 5rem;
+  height: 4rem; }
+
+.card-number {
+  width: 90%;
+  font-weight: bold;
+  letter-spacing: 0.5rem; }
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.card-name {
+  text-transform: uppercase; }
+
+.card-logo {
+  width: 8rem;
+  height: 5rem; }
+
+.card-account-balance {
+  position: absolute;
+  right: 3rem;
+  top: 20%;
+  font-size: 2rem; }
+
 .balance__container {
   background-color: rgba(6, 158, 145, 0.479);
   width: 70%;
@@ -328,6 +379,8 @@ body {
     box-shadow: none; }
   .top-nav__item {
     line-height: 3; }
+  .card-component {
+    height: auto; }
   .welcome-text {
     color: #447f66;
     letter-spacing: 0.1rem;
@@ -346,7 +399,7 @@ body {
     background-color: #447f66; }
   .main {
     width: 100%; }
-  .container {
+  .dashboard-container {
     transition: all 1s;
     width: 100%;
     margin: 0; }
@@ -387,7 +440,9 @@ body {
 
 @media only screen and (max-width: 23.5em) {
   .welcome-text {
-    font-size: 3.5rem; } }
+    font-size: 3.5rem; }
+  .card-number {
+    letter-spacing: 0.3rem; } }
 
 .heading-secondary {
   display: flex;
