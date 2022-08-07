@@ -44,26 +44,39 @@ body {
   font-size: 0.5rem;
   fill: #729787; }
 
+.balance-enquiry__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem; }
+
 .balance__container {
-  background-color: rgba(6, 158, 145, 0.479);
+  background-color: #447f66;
   width: 70%;
   font-size: 1.8rem;
-  padding: 2rem 2rem 2rem;
+  padding: 3rem 2rem 3rem;
   border-radius: 2rem;
   color: #fff;
   text-shadow: 10rem 10rem 10rem red;
-  margin: 0 auto 2rem; }
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15rem; }
 
 .balance-heading {
-  color: red; }
+  color: #2f7557;
+  margin-bottom: 2rem; }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (min-width: 37.5em) {
+  .balance-enquiry__container {
+    width: 80%;
+    margin: 0 auto; }
   .balance__container {
-    padding: 1rem 2rem 2rem;
-    height: 12rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; } }
+    padding: 2rem;
+    height: 20rem; } }
 
 .login-page {
   padding: 5rem 10rem;
@@ -291,7 +304,8 @@ body {
     padding: 2rem 0;
     grid-template-columns: 1fr 1fr 1fr;
     border-top: 1px solid #026b3e52;
-    border-bottom: 1px solid #026b3e52; }
+    border-bottom: 1px solid #026b3e52;
+    gap: 1.2rem; }
   .actionbar__icon {
     fill: #447f66;
     border-radius: 50%;
@@ -320,12 +334,13 @@ body {
   background-color: #447f66;
   width: 90%;
   font-size: 1.8rem;
-  padding: 0 2rem 1rem;
+  padding: 0 2rem 0;
   border-radius: 2rem;
   color: #fff;
   margin: 0 auto 2rem;
   height: fit-content;
-  position: relative; }
+  position: relative;
+  line-height: 2rem; }
 
 .bank-name {
   display: flex;
@@ -338,12 +353,13 @@ body {
 .chip {
   margin-top: -1rem;
   width: 5rem;
-  height: 4rem; }
+  height: 5rem; }
 
 .card-number {
   width: 90%;
   font-weight: bold;
-  letter-spacing: 0.5rem; }
+  letter-spacing: 0.5rem;
+  margin-top: 1rem; }
 
 .card-bottom {
   display: flex;
@@ -354,8 +370,8 @@ body {
   text-transform: uppercase; }
 
 .card-logo {
-  width: 8rem;
-  height: 4.5rem; }
+  width: 15rem;
+  height: 10rem; }
 
 .card-account-balance {
   position: absolute;

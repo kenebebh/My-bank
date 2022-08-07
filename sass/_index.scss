@@ -289,6 +289,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     border-top: 1px solid $color-whitish-green;
     border-bottom: 1px solid $color-whitish-green;
+    gap: 1.2rem;
   }
 
   &__icon {
@@ -330,13 +331,14 @@ body {
   background-color: $color-primary;
   width: 90%;
   font-size: 1.8rem;
-  padding: 0 2rem 1rem;
+  padding: 0 2rem 0;
   border-radius: 2rem;
   color: #fff;
   margin: 0 auto 2rem;
   // height: 28rem;
   height: fit-content;
   position: relative;
+  line-height: 2rem;
 }
 
 .bank-name {
@@ -352,13 +354,14 @@ body {
 .chip {
   margin-top: -1rem;
   width: 5rem;
-  height: 4rem;
+  height: 5rem;
 }
 
 .card-number {
   width: 90%;
   font-weight: bold;
   letter-spacing: 0.5rem;
+  margin-top: 1rem;
 }
 
 .card-bottom {
@@ -372,8 +375,8 @@ body {
 }
 
 .card-logo {
-  width: 8rem;
-  height: 4.5rem;
+  width: 15rem;
+  height: 10rem;
 }
 
 .card-account-balance {
