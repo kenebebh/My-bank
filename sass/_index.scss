@@ -416,6 +416,7 @@ body {
 
   .card-component {
     height: auto;
+    margin: 0 auto;
   }
 
   .welcome-text {
@@ -494,19 +495,11 @@ body {
   }
 
   .display-greetings-bar {
-    padding: 1rem 0 2rem 1rem;
+    padding: 1rem 0 1rem 1rem;
   }
 
   .greetings {
     font-size: 2rem;
-  }
-
-  .balance__container {
-    padding: 1rem 2rem 2rem;
-    height: 12rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 }
 
