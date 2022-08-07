@@ -331,10 +331,10 @@ body {
   background-color: $color-primary;
   width: 90%;
   font-size: 1.8rem;
-  padding: 1rem 2rem;
+  padding: 0 2rem 1rem;
   border-radius: 2rem;
   color: #fff;
-  margin: 1rem auto 2rem;
+  margin: 0 auto 2rem;
   height: 28rem;
   position: relative;
 }
@@ -495,7 +495,7 @@ body {
   }
 
   .display-greetings-bar {
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 0 0 1rem;
   }
 
   .greetings {
