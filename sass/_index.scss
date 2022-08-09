@@ -348,7 +348,7 @@ body {
 }
 
 .bank-logo {
-  margin-left: -2rem;
+  margin-left: -2.5rem;
 }
 
 .chip {
@@ -374,9 +374,14 @@ body {
   text-transform: uppercase;
 }
 
+.card-bank-logo {
+  transform: skewY(-10deg);
+}
+
 .card-logo {
   width: 15rem;
   height: 10rem;
+  margin-bottom: -1rem;
 }
 
 .card-account-balance {
