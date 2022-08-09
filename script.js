@@ -9,9 +9,9 @@ const loginPage = document.querySelector(".login-page");
 const body = document.querySelector(".main");
 
 //fake login
-loginPage.classList.add("hidden");
-body.classList.remove("hidden");
-body.style.opacity = 100;
+// loginPage.classList.add("hidden");
+// body.classList.remove("hidden");
+// body.style.opacity = 100;
 
 //function to make the navbar functional
 const closeOverlay = function () {
