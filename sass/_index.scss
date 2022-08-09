@@ -181,6 +181,7 @@ a {
 
 body {
   transition: all 1s ease-in;
+  position: relative;
 }
 
 .main {
@@ -375,13 +376,14 @@ body {
 }
 
 .card-bank-logo {
-  transform: skewY(-10deg);
+  transform: skewY(-7deg);
 }
 
 .card-logo {
   width: 15rem;
   height: 10rem;
   margin-bottom: -1rem;
+  margin-right: -3rem;
 }
 
 .card-account-balance {

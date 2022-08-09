@@ -110,6 +110,16 @@ body {
     box-shadow: 0 0.01rem 2rem rgba(0, 0, 0, 0.4);
     transform: scale(1.03); }
 
+@media only screen and (min-width: 37.5em) {
+  .bills__container-main {
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+  .bills__container {
+    position: absolute;
+    max-width: 50rem;
+    overflow: scroll; } }
+
 .login-page {
   padding: 5rem 10rem;
   border-radius: 3rem;
@@ -252,7 +262,8 @@ a {
   background-color: #447f66; }
 
 body {
-  transition: all 1s ease-in; }
+  transition: all 1s ease-in;
+  position: relative; }
 
 .main {
   animation: moveInRight 0.5s ease-in;
@@ -402,12 +413,13 @@ body {
   text-transform: uppercase; }
 
 .card-bank-logo {
-  transform: skewY(-10deg); }
+  transform: skewY(-7deg); }
 
 .card-logo {
   width: 15rem;
   height: 10rem;
-  margin-bottom: -1rem; }
+  margin-bottom: -1rem;
+  margin-right: -3rem; }
 
 .card-account-balance {
   position: absolute;

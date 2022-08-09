@@ -42,3 +42,19 @@
     }
   }
 }
+
+@media only screen and (min-width: 37.5em) {
+  .bills__container-main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .bills__container {
+    position: absolute;
+    max-width: 50rem;
+    overflow: scroll;
+    // top: 0;
+    // left: 0;
+    // transform: translate(100%, 0);
+  }
+}
