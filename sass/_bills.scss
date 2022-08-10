@@ -10,12 +10,16 @@
   display: flex;
   justify-content: center;
   padding: 2rem 0;
+  overflow: scroll;
+  position: relative;
 }
 
 .bills {
   &__list {
     list-style: none;
     width: 90%;
+    position: absolute;
+    top: 6rem;
   }
 
   &__item {
@@ -28,12 +32,9 @@
 
   &__link {
     text-decoration: none;
-    // padding: 0 2rem;
     padding-left: 1rem;
     color: white;
     font-size: 1.5rem;
-    // display: flex;
-    // align-items: center;
 
     &:hover,
     &:active {
@@ -41,6 +42,21 @@
       transform: scale(1.03);
     }
   }
+}
+
+.bills-page__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(207, 206, 206, 0.349);
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  right: 0;
+  top: 0;
+  background-color: white;
+  margin: 0;
+  padding: 0 2rem 0 1rem;
 }
 
 @media only screen and (min-width: 37.5em) {
@@ -52,9 +68,12 @@
   .bills__container {
     position: absolute;
     max-width: 50rem;
-    overflow: scroll;
+
     // top: 0;
     // left: 0;
     // transform: translate(100%, 0);
+  }
+  .bills__list {
+    top: 8rem;
   }
 }
