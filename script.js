@@ -8,6 +8,11 @@ const loginButton = document.querySelector(".login-button");
 const loginPage = document.querySelector(".login-page");
 const body = document.querySelector(".main");
 
+//fake login
+// loginPage.classList.add("hidden");
+// body.classList.remove("hidden");
+// body.style.opacity = 100;
+
 //function to make the navbar functional
 const closeOverlay = function () {
   overlay.classList.add("hidden");
@@ -33,7 +38,6 @@ const displayHomepage = function () {
   loginPage.classList.add("hidden");
   body.classList.remove("hidden");
   body.style.opacity = 100;
-  console.log("home page displaying");
 };
 
 loginButton.addEventListener("click", function (e) {

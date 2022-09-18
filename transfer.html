@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="transfer__container">
-            <div class="home-page__nav">
+            <div class="transfer-page__nav">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 20 24" class="home-page__nav--icon nav--icon-1">
                     <title>bars</title>
                     <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
@@ -26,9 +26,9 @@
 
                     <h2 class="active-header">Transfer money</h2>
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="home-page__nav--icon nav--icon-2">
-                        <title>Notifications</title>
-                        <path d="M14.65 8.512c-2.28-4.907-3.466-6.771-7.191-6.693-1.327 0.027-1.009-0.962-2.021-0.587-1.010 0.375-0.143 0.924-1.177 1.773-2.902 2.383-2.635 4.587-1.289 9.84 0.567 2.213-1.367 2.321-0.602 4.465 0.559 1.564 4.679 2.219 9.025 0.607s7.086-4.814 6.527-6.378c-0.765-2.145-2.311-0.961-3.272-3.027zM10.924 16.595c-3.882 1.44-7.072 0.594-7.207 0.217-0.232-0.65 1.253-2.816 5.691-4.463s6.915-1.036 7.174-0.311c0.153 0.429-1.775 3.116-5.658 4.557zM9.676 13.101c-2.029 0.753-3.439 1.614-4.353 2.389 0.643 0.584 1.847 0.726 3.046 0.281 1.527-0.565 2.466-1.866 2.095-2.904-0.005-0.013-0.011-0.023-0.016-0.036-0.251 0.082-0.508 0.171-0.772 0.27z"></path>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" class="home-page__nav--icon back-button">
+                        <title>back</title>
+                        <path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
                         </svg>
             </div>
 
@@ -49,81 +49,102 @@
             </div>
         </div>
     
-        <section class="transfer transfer-page1">
-          <h2 class="heading-tertiary">Choose transfer type</h2>
+        <div class="slider">
+        <section class="transfer transfer-page1" data-tab="1">
+          <h2 class="transfer-heading">Choose transfer type</h2>
           <div class="transfer-type__container">
               <div class="transfer-type__option transfer-type-mybank">
+<<<<<<< HEAD
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 40 40" class="transfer__icons">
+=======
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-10 -7 50 50" class="transfer__icons">
+>>>>>>> a008c878ec13ae9d3883bbc33bd8ea8e25bfc112
                     <title>bank</title>
                     <path d="M0 32h16v-32h-16v32zM10 4h4v4h-4v-4zM10 12h4v4h-4v-4zM10 20h4v4h-4v-4zM2 4h4v4h-4v-4zM2 12h4v4h-4v-4zM2 20h4v4h-4v-4zM18 10h14v2h-14zM18 32h4v-8h6v8h4v-18h-14z"></path>
                     </svg>
-                    <h3 class="transfer__headings">To Surge Bank account</h3>
+                    <h3 class="transfer__headings"><a href="#" class="transfer-link">To Surge Bank account</a></h3>
               </div>
 
               <div class="transfer-type__option transfer-type-otherbank">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="transfer__icons">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-2 -2 25 25" class="transfer__icons">
                     <title>other bank</title>
                     <path d="M18.672 11h-1.672v6c0 0.445-0.194 1-1 1h-4v-6h-4v6h-4c-0.806 0-1-0.555-1-1v-6h-1.672c-0.598 0-0.47-0.324-0.060-0.748l8.024-8.032c0.195-0.202 0.451-0.302 0.708-0.312 0.257 0.010 0.513 0.109 0.708 0.312l8.023 8.031c0.411 0.425 0.539 0.749-0.059 0.749z"></path>
                     </svg>
-                    <h3 class="transfer__headings">To Other Bank account</h3>
+                    <h3 class="transfer__headings"><a href="#" class="transfer-link">To Other Bank account</a></h3>
               </div>
 
               <div class="transfer-type__option transfer-type-mybank">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="transfer__icons">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-2 -2 25 25" class="transfer__icons">
                     <title>beneficiary</title>
                     <path d="M17.19 4.155c-1.672-1.534-4.383-1.534-6.055 0l-1.135 1.042-1.136-1.042c-1.672-1.534-4.382-1.534-6.054 0-1.881 1.727-1.881 4.52 0 6.246l7.19 6.599 7.19-6.599c1.88-1.726 1.88-4.52 0-6.246z"></path>
                     </svg>
-                    <h3 class="transfer__headings">To Saved Beneficiary</h3>
+                    <h3 class="transfer__headings"><a href="#" class="transfer-link">To Saved Beneficiary</a></h3>
               </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         <section class="transfer transfer-page2 hidden">
             <h2 class="heading-tertiary">Choose a beneficiary</h2>
+=======
+        <section class="transfer transfer-page2" data-tab="2">
+            <h2 class="transfer-heading">Choose a beneficiary</h2>
+>>>>>>> a008c878ec13ae9d3883bbc33bd8ea8e25bfc112
             <div class="beneficiary__container">
-                <div class="bebeficiary-card">
+                <div class="beneficiary-card">
                     <p class="beneficiary__name">Kene💞 </p>
                     <p class="account__container">#<span class="account-number">3135254164</span></p>
                 </div>
-                <div class="bebeficiary-card">
+                <div class="beneficiary-card">
                     <p class="beneficiary__name">Sweet mum💎</p>
                     <p class="account__container">#<span class="account-number">300453217</span></p>
                 </div>
-                <div class="bebeficiary-card">
+                <div class="beneficiary-card">
                     <p class="beneficiary__name">Dad</p>
                     <p class="account__container">#<span class="account-number">2201804211</span></p>
                 </div>
             </div>
         </section>
 
+<<<<<<< HEAD
         <section class="transfer transfer-page3 hidden">
+=======
+        <section class="transfer transfer-page3" data-tab="3">
+>>>>>>> a008c878ec13ae9d3883bbc33bd8ea8e25bfc112
             <div class="transfer__main-container">
-                <h3 class="transfer__headings">Max transfer amount: ₦1,000,000</h3>
+                <h3 class="transfer__heading-guide">Max transfer amount: ₦1,000,000</h3>
 
-                <h2 class="heading-tertiary">Enter transfer details</h2>
+                <h2 class="transfer-heading">Enter transfer details</h2>
                 <form action="" class="transfer-info__container">
                     <label for="accNo" class="transfer-label">Account Number:  
-                        <input type="number" name="accNo" id="accNo">
+                        <input type="number" name="accNo" id="accNo" class="transfer-info__detail">
                     </label>
                     <div class="name-box">Banigo Kenebebh Nadari</div>
                     <label for="transfer-amount" class="transfer-label">Enter Amount:  
-                        <input type="number" name="transfer-amount" id="transfer-amount">
+                        <input type="number" name="transfer-amount" id="transfer-amount" class="transfer-info__detail">
                     </label>
-                    <label for="transfer-narration" class="transfer-label">Enter Amount:  
-                        <input type="text" name="transfer-narration" id="transfer-narration">
+                    <label for="transfer-narration" class="transfer-label">Enter Narration:  
+                        <input type="text" name="transfer-narration" id="transfer-narration" class="transfer-info__detail">
                     </label>
+
+                    <input type="submit" value="Send" class="send-money-1">
                 </form>
             </div>
         </section>
 
+<<<<<<< HEAD
         <section class="transfer transfer-page4 hidden">
             <h2 class="heading-tertiary">Confirm Transfer</h2>
+=======
+        <section class="transfer transfer-page4" data-tab="4">
+            <h2 class="transfer-heading">Confirm Transfer</h2>
+>>>>>>> a008c878ec13ae9d3883bbc33bd8ea8e25bfc112
             <div class="confirm__container">
                 <p class="confirm__info">From: <span class="sender-name">Banigo Kenebebh</span></p>
                 <p class="confirm__info">To: <span class="receiver-name">Banigo Orior</span></p>
                 <p class="confirm__info">Recipient Bank: <span class="recipient-bank">Surge Bank Account</span></p>
                 <p class="confirm__info">Date: <span class="todays-date">22/07/2022</span></p>
-                <p class="confirm__info">Amount: <span class="amount-sent">₦10,000</span></p>
+                <p class="confirm__info">Amount: <span class="amount-sent">₦100,000</span></p>
                 <p class="confirm__info">Description: <span class="description">Birthday money</span></p>
             </div>
 
@@ -141,13 +162,45 @@
                             <path d="M14.906 21.984h-0.141q-2.156-0.563-3.703-2.109-0.891-0.891-1.523-2.414t-0.633-2.789q0-1.219 0.891-2.086t2.156-0.867 2.18 0.867 0.914 2.086q0 0.797 0.586 1.359t1.477 0.563 1.5-0.563 0.609-1.359q0-2.813-2.133-4.828t-5.133-2.016q-2.156 0-3.938 1.102t-2.672 2.93q-0.563 1.172-0.563 2.813 0 1.875 0.656 3.609 0.141 0.469-0.328 0.609t-0.609-0.281q-0.75-1.922-0.75-3.938 0-1.828 0.703-3.234 0.984-2.109 3.023-3.375t4.477-1.266q3.422 0 5.836 2.32t2.414 5.555q0 1.219-0.914 2.063t-2.18 0.844-2.156-0.844-0.891-2.063q0-0.797-0.609-1.383t-1.5-0.586-1.477 0.586-0.586 1.383q0 2.625 1.875 4.5 1.313 1.313 3.281 1.828 0.422 0.047 0.328 0.609-0.094 0.375-0.469 0.375zM12.422 14.672q0 1.734 1.289 3t3.211 1.266q0.094 0 0.422-0.047t0.539-0.047 0.422 0.070 0.258 0.305q0.094 0.516-0.422 0.609-0.563 0.094-1.219 0.094-1.875 0-3.094-0.891-2.391-1.641-2.391-4.359 0-0.516 0.516-0.516 0.469 0 0.469 0.516zM9.75 21.797q-0.188 0-0.328-0.141-1.266-1.266-2.016-2.672-1.078-1.875-1.078-4.313 0-2.203 1.664-3.797t4.008-1.594 4.008 1.594 1.664 3.797q0 0.469-0.516 0.469t-0.516-0.469q0-1.828-1.359-3.117t-3.281-1.289-3.281 1.289-1.359 3.117q0 2.25 0.891 3.844 0.609 1.078 1.875 2.438 0.375 0.328 0 0.703-0.141 0.141-0.375 0.141zM3.516 9.703q-0.516 0-0.516-0.469 0-0.094 0.094-0.281 1.5-2.156 3.75-3.281 2.344-1.219 5.156-1.219t5.156 1.219q2.297 1.125 3.75 3.234 0.094 0.188 0.094 0.281 0 0.328-0.375 0.469t-0.563-0.188q-1.406-1.922-3.375-2.906-2.156-1.078-4.688-1.102t-4.688 1.102q-2.109 1.078-3.422 2.953-0.141 0.188-0.375 0.188zM17.813 4.453q-0.188 0-0.234-0.047-2.766-1.406-5.578-1.406-3.047 0-5.578 1.406-0.234 0.141-0.469 0t-0.234-0.422q0-0.328 0.234-0.469 2.719-1.5 6.047-1.5 3.047 0 6.047 1.5 0.422 0.234 0.188 0.656-0.188 0.281-0.422 0.281z"></path>
                             </svg>
                     </button>
+                </div>
 
                     <button class="cancel-transfer">
                         CANCEL
                     </button>
+            </div>
+        </section>
+
+        <section class="transfer transfer-page5 transfer-successful" data-tab="5">
+            <div class="successful-container">
+                <div class="icon-container">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 20 20" class="successful-icon">
+                        <title>check</title>
+                        <path d="M8.294 16.998c-0.435 0-0.847-0.203-1.111-0.553l-3.573-4.721c-0.465-0.613-0.344-1.486 0.27-1.951 0.615-0.467 1.488-0.344 1.953 0.27l2.351 3.104 5.911-9.492c0.407-0.652 1.267-0.852 1.921-0.445s0.854 1.266 0.446 1.92l-6.984 11.21c-0.242 0.391-0.661 0.635-1.12 0.656-0.022 0.002-0.042 0.002-0.064 0.002z"></path>
+                        </svg>
+                </div>
+
+                <div class="successful-text">
+                    Transaction successful
                 </div>
             </div>
         </section>
+
+        <section class="transfer transfer-page6 transfer-unsuccessful" data-tab="6">
+            <div class="unsuccessful-container">
+                <div class="icon-container">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="unsuccessful-icon">
+                        <title>circle-with-cross</title>
+                        <path d="M10 1.6c-4.639 0-8.4 3.761-8.4 8.4s3.761 8.4 8.4 8.4 8.4-3.761 8.4-8.4c0-4.639-3.761-8.4-8.4-8.4zM14.789 13.061l-1.729 1.729-3.060-3.061-3.061 3.060-1.729-1.729 3.062-3.060-3.061-3.061 1.729-1.728 3.060 3.060 3.061-3.061 1.729 1.729-3.062 3.061 3.061 3.061z"></path>
+                        </svg>
+                </div>
+
+                <div class="unsuccessful-text">
+                    Transaction unsuccessful
+                </div>
+            </div>
+        </section>
+        </div>
+
         </div>
 </body>
 </html>
