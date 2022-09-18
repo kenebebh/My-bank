@@ -194,7 +194,6 @@ body {
 .main {
   animation: moveInRight 0.5s ease-in;
   backface-visibility: hidden;
-  overflow: auto;
   height: 100vh;
 }
 
@@ -210,6 +209,7 @@ body {
   transition: all 1s;
   width: 50rem;
   position: relative;
+  overflow-y: auto;
 }
 
 .nav {
@@ -275,6 +275,8 @@ body {
   padding: 1rem 2rem 0;
   border-radius: 2rem;
   height: 95vh;
+  width: 100%;
+  overflow-x: hidden;
 
   &__nav {
     display: flex;
@@ -307,10 +309,9 @@ body {
   }
 
   &__icon {
-    fill: $color-primary;
-    // fill: $color-secondary;
+    fill: $color-secondary;
     border-radius: 50%;
-    border: 1.5px solid $color-whitish-green;
+    border: 1.5px solid $color-primary-dark;
     padding: 0.5rem;
   }
 

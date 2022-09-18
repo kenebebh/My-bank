@@ -2,17 +2,15 @@
 
 // transfers.forEach((transfer) => transfer.classList.add("hidden"));
 
-// const setPinButton = document.querySelector(".setpin-button");
-// const setPinContainer = document.querySelector(".pin-box__container");
+const setPinButton = document.querySelector(".setpin-button");
+const setPinContainer = document.querySelector(".pin-box__container");
 
-<<<<<<< HEAD
-// setPinButton.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   setPinContainer.classList.add("hidden");
-//   transfers.forEach((transfer) => transfer.classList.remove("hidden"));
-//   console.log("display transfer");
-// });
-=======
+setPinButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  setPinContainer.classList.add("hidden");
+  transfers.forEach((transfer) => transfer.classList.remove("hidden"));
+  console.log("display transfer");
+});
 const backButton = document.querySelector(".back-button");
 
 const transferPage1 = document.querySelector(".transfer-page1");
@@ -52,7 +50,10 @@ transferPage2.addEventListener("click", function (e) {
   e.preventDefault();
   pageNumber = 2;
 
-  if (e.target.classList.contains("beneficiary-card")) {
+  const clicked = e.target.closest(".beneficiary-card");
+  console.log(clicked);
+
+  if (clicked.classList.contains("beneficiary-card")) {
     changeActivePage();
   }
 });
@@ -74,4 +75,3 @@ transferPage4.addEventListener("click", function (e) {
     changeActivePage();
   }
 });
->>>>>>> a008c878ec13ae9d3883bbc33bd8ea8e25bfc112
