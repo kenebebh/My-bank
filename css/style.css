@@ -32,6 +32,7 @@ html {
 body {
   padding: 2rem;
   font-weight: 300;
+  height: 100vh;
   line-height: 3;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
@@ -48,14 +49,14 @@ body {
   fill: #729787; }
 
 .login-page {
-  padding: 5rem 10rem;
+  padding: 5rem;
   border-radius: 3rem;
-  height: 70vh;
+  height: 80vh;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
   box-shadow: 1rem 1rem 10rem #026b3e52;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 a {
   text-decoration: none; }
@@ -185,6 +186,7 @@ a {
 .container {
   transition: all 1s;
   width: 50rem;
+  height: 100vh;
   position: relative; }
 
 .location-icon {
@@ -199,7 +201,8 @@ body {
 .main {
   animation: moveInRight 0.5s ease-in;
   backface-visibility: hidden;
-  overflow-y: scroll; }
+  overflow: auto;
+  height: 100vh; }
 
 body {
   position: relative;
@@ -251,15 +254,16 @@ body {
 
 .home-page {
   border: 1px solid #026b3e52;
-  padding: 1rem 5rem 0;
-  border-radius: 2rem; }
+  padding: 1rem 3rem 0;
+  border-radius: 2rem;
+  height: 95vh; }
   .home-page__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(207, 206, 206, 0.349);
-    margin: 0 -5rem;
-    padding: 0 5rem; }
+    margin: 0 -3rem;
+    padding: 0 4rem; }
     .home-page__nav--icon {
       fill: #2f7557; }
 
@@ -269,6 +273,7 @@ body {
   align-items: center; }
   .actionbar__container {
     display: grid;
+    margin: 2rem 0;
     padding: 2rem 0;
     grid-template-columns: 1fr 1fr 1fr;
     border-top: 1px solid #026b3e52;
@@ -302,7 +307,7 @@ body {
   border-radius: 2rem;
   color: #fff;
   text-shadow: 10rem 10rem 10rem red;
-  margin: 0 auto 2rem; }
+  margin: 2rem auto; }
 
 .statistics__content {
   display: flex;
@@ -460,6 +465,9 @@ body {
   .signup-button:active {
     transform: translateY(0); }
 
+.transfer {
+  border: 1px solid black; }
+
 .transfer__container {
   border: 1px solid #026b3e52;
   height: 95vh;
@@ -467,7 +475,7 @@ body {
   border-radius: 2rem;
   position: relative;
   width: 50rem;
-  overflow: hidden; }
+  overflow: auto; }
 
 .info-header {
   text-transform: uppercase;
@@ -495,8 +503,7 @@ body {
 .home-page__nav {
   position: absolute;
   z-index: 1000;
-  width: 100%;
-  left: 0;
+  width: 98%;
   background-color: white; }
 
 .create-pin {

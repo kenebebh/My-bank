@@ -1,3 +1,6 @@
+.transfer {
+  border: 1px solid black;
+}
 .transfer__container {
   border: 1px solid $color-whitish-green;
   height: 95vh;
@@ -5,7 +8,7 @@
   border-radius: 2rem;
   position: relative;
   width: 50rem;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .info-header {
@@ -39,8 +42,7 @@
 .home-page__nav {
   position: absolute;
   z-index: 1000;
-  width: 100%;
-  left: 0;
+  width: 98%;
   background-color: white;
 }
 
