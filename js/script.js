@@ -7,11 +7,17 @@ const homePage = document.querySelector(".home-page");
 const loginButton = document.querySelector(".login-button");
 const loginPage = document.querySelector(".login-page");
 const body = document.querySelector(".main");
+const closeIcon = document.querySelector(".close");
 
 //fake login
 // loginPage.classList.add("hidden");
 // body.classList.remove("hidden");
 // body.style.opacity = 100;
+
+closeIcon.addEventListener("click", function () {
+  closeOverlay();
+  hideNav();
+});
 
 //function to make the navbar functional
 const closeOverlay = function () {
@@ -40,11 +46,6 @@ const displayHomepage = function () {
   body.style.opacity = 100;
 };
 
-loginButton.addEventListener("click", function (e) {
-  e.preventDefault();
-  displayHomepage();
-});
-
 const displayLoginPage = function () {
   loginPage.classList.remove("hidden");
   body.classList.add("hidden");
@@ -52,9 +53,13 @@ const displayLoginPage = function () {
 };
 
 document.addEventListener("keydown", function (e) {
-  console.log(e.key);
   if (e.key === "Escape" && !body.classList.contains("hidden")) {
     displayLoginPage();
     closeOverlay();
   }
+});
+
+loginButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  displayHomepage();
 });

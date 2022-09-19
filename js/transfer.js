@@ -1,16 +1,7 @@
-// const transfers = document.querySelectorAll(".transfer");
-
-// transfers.forEach((transfer) => transfer.classList.add("hidden"));
-
+"use strict";
 const setPinButton = document.querySelector(".setpin-button");
 const setPinContainer = document.querySelector(".pin-box__container");
 
-setPinButton.addEventListener("click", function (e) {
-  e.preventDefault();
-  setPinContainer.classList.add("hidden");
-  transfers.forEach((transfer) => transfer.classList.remove("hidden"));
-  console.log("display transfer");
-});
 const backButton = document.querySelector(".back-button");
 
 const transferPage1 = document.querySelector(".transfer-page1");
@@ -74,4 +65,11 @@ transferPage4.addEventListener("click", function (e) {
   if (e.target.classList.contains("confirm-transfer")) {
     changeActivePage();
   }
+});
+
+setPinButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  setPinContainer.classList.add("hidden");
+  transfers.forEach((transfer) => transfer.classList.remove("hidden"));
+  console.log("display transfer");
 });

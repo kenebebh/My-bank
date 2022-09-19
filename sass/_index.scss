@@ -220,6 +220,7 @@ body {
   animation: moveInLeft 1s ease-out;
   position: absolute;
   top: 0;
+  left: 0;
   width: 90%;
   height: 100%;
   opacity: 0;
@@ -252,6 +253,19 @@ body {
   &__icon {
     fill: white;
     margin-right: 1rem;
+  }
+}
+
+.close-container {
+  text-align: right;
+  transition: transform 1s;
+}
+
+.close {
+  fill: white;
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 

@@ -287,6 +287,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .confirm__container {
   min-width: 95%;
   color: white;
+  font-size: 1.7rem;
 }
 
 .confirm__info {
@@ -349,6 +350,15 @@ input[type="number"]::-webkit-inner-spin-button {
   text-align: center;
   background-color: transparent;
   width: 30%;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 .confirm-fingerprint-icon {
@@ -374,9 +384,12 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 3px;
   box-shadow: 0 0.01rem 2rem rgba($color-black, 0.4);
   transition: all 1s;
-  color: whitesmoke;
   font-size: 1.7rem;
   cursor: pointer;
+
+  &-text {
+    color: whitesmoke;
+  }
 
   &:hover {
     transform: translateY(-0.2rem);

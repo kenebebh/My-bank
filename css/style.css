@@ -105,15 +105,15 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #026b3e52; }
+  .bills__item:hover, .bills__item:active {
+    box-shadow: 0 0.01rem 2rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.03); }
 
 .bills__link {
   text-decoration: none;
   padding-left: 1rem;
   color: white;
   font-size: 1.5rem; }
-  .bills__link:hover, .bills__link:active {
-    box-shadow: 0 0.01rem 2rem rgba(0, 0, 0, 0.4);
-    transform: scale(1.03); }
 
 .bills-page__nav {
   display: flex;
@@ -317,6 +317,7 @@ body {
   animation: moveInLeft 1s ease-out;
   position: absolute;
   top: 0;
+  left: 0;
   width: 90%;
   height: 100%;
   opacity: 0;
@@ -339,6 +340,15 @@ body {
   .nav__icon {
     fill: white;
     margin-right: 1rem; }
+
+.close-container {
+  text-align: right;
+  transition: transform 1s; }
+
+.close {
+  fill: white; }
+  .close:hover {
+    transform: scale(1.1); }
 
 .overlay {
   position: absolute;
@@ -556,12 +566,15 @@ body {
   display: flex;
   flex-direction: column;
   font-family: inherit; }
-  .signup-container {
+  .signup-content {
     border: 1px solid #729787;
     padding: 2rem 5rem 5rem;
     border-radius: 5rem;
     margin-top: 5rem;
     width: 50rem; }
+  .signup-container {
+    display: flex;
+    justify-content: center; }
 
 .form-input,
 .account-details {
@@ -852,7 +865,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .confirm__container {
   min-width: 95%;
-  color: white; }
+  color: white;
+  font-size: 1.7rem; }
 
 .confirm__info {
   display: flex;
@@ -897,7 +911,12 @@ input[type="number"]::-webkit-inner-spin-button {
   border: none;
   text-align: center;
   background-color: transparent;
-  width: 30%; }
+  width: 30%;
+  cursor: pointer; }
+  .confirm-with-fingerprint:hover {
+    transform: translateY(-0.2rem); }
+  .confirm-with-fingerprint:active {
+    transform: translateY(0); }
 
 .confirm-fingerprint-icon {
   fill: white;
@@ -920,9 +939,10 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 3px;
   box-shadow: 0 0.01rem 2rem rgba(0, 0, 0, 0.4);
   transition: all 1s;
-  color: whitesmoke;
   font-size: 1.7rem;
   cursor: pointer; }
+  .cancel-transfer-text {
+    color: whitesmoke; }
   .cancel-transfer:hover {
     transform: translateY(-0.2rem); }
   .cancel-transfer:active {
