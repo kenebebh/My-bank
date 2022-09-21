@@ -506,12 +506,17 @@ body {
   color: #2f7557; }
 
 @media only screen and (max-width: 37.5em) {
+  body {
+    line-height: 3; }
   .login-page {
     padding: 1rem;
     border-radius: 0;
     height: 100vh;
     margin-top: 1rem;
     box-shadow: none; }
+  .error-message-container {
+    width: 100%;
+    height: 5rem; }
   .top-nav__item {
     line-height: 3; }
   .card-component {
