@@ -1,32 +1,55 @@
 "use strict";
 
-const signUpButton = document.querySelector(".signup-button");
-const firstName = document.querySelector("#firstName");
-const lastName = document.querySelector("#lastName");
-const username = document.querySelector("#username");
-const loginPassword = document.querySelector("#password1");
-const loginPasswordCheck = document.querySelector("#password2");
-const accountType = document.querySelector("#account-type");
+// localStorage.removeItem("firstName");
+// localStorage.removeItem("lastName");
+// localStorage.removeItem("username");
+// localStorage.removeItem("loginPassword");
+// localStorage.removeItem("accountType");
 
-let fullName = `${firstName.value} ${lastName.value}`;
+const signUpButton = document.querySelector(".signup-button");
+let firstNameEL = document.querySelector("#firstName");
+let lastNameEL = document.querySelector("#lastName");
+let usernameEL = document.querySelector("#username");
+let loginPasswordEL = document.querySelector("#password1");
+let loginPasswordCheckEL = document.querySelector("#password2");
+let accountTypeEL = document.querySelector("#account-type");
+
+const form = document.forms[0];
+console.log(form);
+let firstName, lastName, username, loginPassword, accountType;
+
 let passwordMatch = false;
 
 signUpButton.addEventListener("click", function (e) {
-  if (!passwordMatch) {
-    e.preventDefault();
-  }
+  e.preventDefault();
+  localStorage.setItem("firstName", `${firstNameEL.value}`);
+  localStorage.setItem("lastName", `${lastNameEL.value}`);
+  localStorage.setItem("username", `${usernameEL.value}`);
+  localStorage.setItem("loginPassword", `${loginPasswordEL.value}`);
+  localStorage.setItem("accountType", `${accountTypeEL.value}`);
+
+  // firstName = localStorage.getItem("firstName");
+  // lastName = localStorage.getItem("lastName");
+  // username = localStorage.getItem("username");
+  // loginPassword = localStorage.getItem("loginPassword");
+  // accountType = localStorage.getItem("accountType");
+
+  location.href = "index.html";
 });
 
+console.log(firstNameEL);
+
+console.log(firstName, lastName, username, loginPassword, accountType);
+
 const checkPassword = function () {
-  if (loginPasswordCheck.value === loginPassword.value) {
+  if (loginPasswordCheckEL.value === loginPasswordEL.value) {
     passwordMatch = true;
     console.log(`same`);
   } else {
     passwordMatch = false;
-    console.log(`not same`);
   }
 };
 
-loginPasswordCheck.addEventListener("keyup", () => {
+loginPasswordCheckEL.addEventListener("keyup", () => {
   checkPassword();
 });

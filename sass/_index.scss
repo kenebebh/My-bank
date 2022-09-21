@@ -6,7 +6,10 @@
   display: flex;
   flex-direction: column;
   box-shadow: 1rem 1rem 10rem $color-whitish-green;
-  overflow-y: auto;
+  // overflow-y: auto;
+  width: 50rem;
+  position: relative;
+  transition: transform 0.5s ease-out;
 }
 a {
   text-decoration: none;
@@ -95,6 +98,16 @@ a {
   &:active {
     transform: translateY(0);
   }
+}
+
+.error-message-container {
+  background-color: rgba(223, 15, 15, 0.904);
+  padding: 0 3rem;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 80%;
+  animation: moveInBottom 0.5s ease-in;
 }
 
 .login-2 {

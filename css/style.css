@@ -18,6 +18,16 @@
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem); }
+  80% {
+    transform: translateY(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 *,
 *::before,
 *::after {
@@ -148,7 +158,9 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 1rem 1rem 10rem #026b3e52;
-  overflow-y: auto; }
+  width: 50rem;
+  position: relative;
+  transition: transform 0.5s ease-out; }
 
 a {
   text-decoration: none; }
@@ -217,6 +229,15 @@ a {
     transform: translateY(-0.2rem); }
   .login-button:active {
     transform: translateY(0); }
+
+.error-message-container {
+  background-color: rgba(223, 15, 15, 0.904);
+  padding: 0 3rem;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 80%;
+  animation: moveInBottom 0.5s ease-in; }
 
 .login-2 {
   cursor: pointer;
@@ -633,7 +654,7 @@ body {
     transform: translateY(0); }
 
 @media only screen and (max-width: 37.5em) {
-  .signup-container {
+  .signup-content {
     padding: 2rem 2rem 5rem;
     border: none;
     margin-top: 5rem;

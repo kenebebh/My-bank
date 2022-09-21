@@ -1,5 +1,17 @@
 "use strict";
 
+let userDetails = {
+  firstName: localStorage.getItem("firstName"),
+  lastName: localStorage.getItem("lastName"),
+  username: localStorage.getItem("username"),
+  loginPassword: localStorage.getItem("loginPassword"),
+  accountType: localStorage.getItem("accountType"),
+};
+
+// console.log(userDetails.username);
+// console.log(usernameEL);
+// console.log(loginPasswordEL);
+
 const navbarIcon = document.querySelector(".nav--icon-1");
 const overlay = document.querySelector(".overlay");
 const nav = document.querySelector(".nav");
@@ -8,11 +20,22 @@ const loginButton = document.querySelector(".login-button");
 const loginPage = document.querySelector(".login-page");
 const body = document.querySelector(".main");
 const closeIcon = document.querySelector(".close");
+const errorMessageEL = document.querySelector(".error-message-container");
+const fullNameEL = document.querySelectorAll(".name");
+console.log(fullNameEL);
 
-//fake login
-// loginPage.classList.add("hidden");
-// body.classList.remove("hidden");
-// body.style.opacity = 100;
+fullNameEL.forEach((element) => console.log(element));
+
+fullNameEL.forEach(
+  (person) =>
+    (person.textContent = `${userDetails.firstName} ${userDetails.lastName}`)
+);
+// fullNameEL.textContent = `${userDetails.firstName} ${userDetails.lastName}`;
+
+// fake login
+loginPage.classList.add("hidden");
+body.classList.remove("hidden");
+body.style.opacity = 100;
 
 closeIcon.addEventListener("click", function () {
   closeOverlay();
@@ -61,5 +84,20 @@ document.addEventListener("keydown", function (e) {
 
 loginButton.addEventListener("click", function (e) {
   e.preventDefault();
-  displayHomepage();
+  validateLogin();
+  // displayHomepage();
 });
+
+const validateLogin = function () {
+  if (
+    loginPasswordEL.value === userDetails.loginPassword &&
+    usernameEL.value === userDetails.username
+  ) {
+    displayHomepage();
+  } else {
+    errorMessageEL.classList.remove("hidden");
+    setTimeout(() => {
+      errorMessageEL.classList.add("hidden");
+    }, 3000);
+  }
+};
