@@ -33,9 +33,9 @@ fullNameEL.forEach(
 // fullNameEL.textContent = `${userDetails.firstName} ${userDetails.lastName}`;
 
 // fake login
-loginPage.classList.add("hidden");
-body.classList.remove("hidden");
-body.style.opacity = 100;
+// loginPage.classList.add("hidden");
+// body.classList.remove("hidden");
+// body.style.opacity = 100;
 
 closeIcon.addEventListener("click", function () {
   closeOverlay();
