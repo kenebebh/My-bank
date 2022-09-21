@@ -265,7 +265,7 @@ a {
   transition: all 0.1s; }
   .login-cta__options:hover {
     text-decoration: underline;
-    transform: scale(1.03); }
+    transform: scale(1.07); }
 
 .login__link {
   color: #242323;

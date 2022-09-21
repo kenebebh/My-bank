@@ -89,7 +89,13 @@ loginButton.addEventListener("click", function (e) {
 });
 
 const validateLogin = function () {
-  if (
+  if (userDetails.loginPassword === null || userDetails.username === null) {
+    errorMessageEL.textContent = `Please sign up!`;
+    errorMessageEL.classList.remove("hidden");
+    setTimeout(() => {
+      errorMessageEL.classList.add("hidden");
+    }, 3000);
+  } else if (
     loginPasswordEL.value === userDetails.loginPassword &&
     usernameEL.value === userDetails.username
   ) {
