@@ -8,10 +8,6 @@ let userDetails = {
   accountType: localStorage.getItem("accountType"),
 };
 
-// console.log(userDetails.username);
-// console.log(usernameEL);
-// console.log(loginPasswordEL);
-
 const navbarIcon = document.querySelector(".nav--icon-1");
 const overlay = document.querySelector(".overlay");
 const nav = document.querySelector(".nav");
@@ -20,9 +16,8 @@ const loginButton = document.querySelector(".login-button");
 const loginPage = document.querySelector(".login-page");
 const body = document.querySelector(".main");
 const closeIcon = document.querySelector(".close");
-const errorMessageEL = document.querySelector(".error-message-container");
+const errorMessage2EL = document.querySelector(".error-message-container");
 const fullNameEL = document.querySelectorAll(".name");
-console.log(fullNameEL);
 
 fullNameEL.forEach((element) => console.log(element));
 
@@ -30,7 +25,6 @@ fullNameEL.forEach(
   (person) =>
     (person.textContent = `${userDetails.firstName} ${userDetails.lastName}`)
 );
-// fullNameEL.textContent = `${userDetails.firstName} ${userDetails.lastName}`;
 
 // fake login
 // loginPage.classList.add("hidden");
@@ -85,15 +79,14 @@ document.addEventListener("keydown", function (e) {
 loginButton.addEventListener("click", function (e) {
   e.preventDefault();
   validateLogin();
-  // displayHomepage();
 });
 
 const validateLogin = function () {
   if (userDetails.loginPassword === null || userDetails.username === null) {
-    errorMessageEL.textContent = `Please sign up!`;
-    errorMessageEL.classList.remove("hidden");
+    errorMessage2EL.textContent = `Please sign up!`;
+    errorMessage2EL.classList.remove("hidden");
     setTimeout(() => {
-      errorMessageEL.classList.add("hidden");
+      errorMessage2EL.classList.add("hidden");
     }, 3000);
   } else if (
     loginPasswordEL.value === userDetails.loginPassword &&
@@ -101,9 +94,9 @@ const validateLogin = function () {
   ) {
     displayHomepage();
   } else {
-    errorMessageEL.classList.remove("hidden");
+    errorMessage2EL.classList.remove("hidden");
     setTimeout(() => {
-      errorMessageEL.classList.add("hidden");
+      errorMessage2EL.classList.add("hidden");
     }, 3000);
   }
 };

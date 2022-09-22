@@ -453,15 +453,12 @@ body {
 }
 
 @media only screen and (max-width: 37.5em) {
-  body {
-    line-height: 3;
-  }
   .login-page {
     padding: 1rem;
     border-radius: 0;
     height: 100vh;
     margin-top: 1rem;
-
+    line-height: 3;
     box-shadow: none;
   }
 

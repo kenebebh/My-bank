@@ -13,38 +13,31 @@ let usernameEL = document.querySelector("#username");
 let loginPasswordEL = document.querySelector("#password1");
 let loginPasswordCheckEL = document.querySelector("#password2");
 let accountTypeEL = document.querySelector("#account-type");
-
-const form = document.forms[0];
-console.log(form);
-let firstName, lastName, username, loginPassword, accountType;
+const errorMessageEL = document.querySelector(".error-message-container");
 
 let passwordMatch = false;
 
 signUpButton.addEventListener("click", function (e) {
   e.preventDefault();
-  localStorage.setItem("firstName", `${firstNameEL.value}`);
-  localStorage.setItem("lastName", `${lastNameEL.value}`);
-  localStorage.setItem("username", `${usernameEL.value}`);
-  localStorage.setItem("loginPassword", `${loginPasswordEL.value}`);
-  localStorage.setItem("accountType", `${accountTypeEL.value}`);
-
-  // firstName = localStorage.getItem("firstName");
-  // lastName = localStorage.getItem("lastName");
-  // username = localStorage.getItem("username");
-  // loginPassword = localStorage.getItem("loginPassword");
-  // accountType = localStorage.getItem("accountType");
-
-  location.href = "index.html";
+  if (passwordMatch) {
+    localStorage.setItem("firstName", `${firstNameEL.value}`);
+    localStorage.setItem("lastName", `${lastNameEL.value}`);
+    localStorage.setItem("username", `${usernameEL.value}`);
+    localStorage.setItem("loginPassword", `${loginPasswordEL.value}`);
+    localStorage.setItem("accountType", `${accountTypeEL.value}`);
+    location.href = "index.html";
+  } else {
+    errorMessageEL.classList.remove("hidden");
+    setTimeout(() => {
+      errorMessageEL.classList.add("hidden");
+    }, 3000);
+    console.log(`passwords dont match`);
+  }
 });
-
-console.log(firstNameEL);
-
-console.log(firstName, lastName, username, loginPassword, accountType);
 
 const checkPassword = function () {
   if (loginPasswordCheckEL.value === loginPasswordEL.value) {
     passwordMatch = true;
-    console.log(`same`);
   } else {
     passwordMatch = false;
   }

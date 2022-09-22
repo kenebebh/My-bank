@@ -18,6 +18,7 @@
 </head>
 <body>
     <div class="transfer__container">
+
         
         <nav class="nav hidden">
             <div class="nav__close-container close-container">
@@ -101,7 +102,13 @@
                         </svg>
             </div>
 
+
+        <div class="no-proceed-message hidden">
+            <p class="no-proceed-content">Input must be numbers</p>
+        </div>
+
         <div class="pin-box__container">
+
             <div class="pin-box__content">
                 <h2 class="info-header">Please, create a transfer PIN</h2>
                 <form action="" class="create-pin">
@@ -151,15 +158,15 @@
         <section class="transfer transfer-page2 hidden" data-tab="2">
             <h2 class="transfer-heading">Choose a beneficiary</h2>
             <div class="beneficiary__container">
-                <div class="beneficiary-card">
+                <div class="beneficiary-card" data-tab="1">
                     <p class="beneficiary__name">Kene💞 </p>
                     <p class="account__container">#<span class="account-number">3135254164</span></p>
                 </div>
-                <div class="beneficiary-card">
+                <div class="beneficiary-card" data-tab="2">
                     <p class="beneficiary__name">Sweet mum💎</p>
                     <p class="account__container">#<span class="account-number">300453217</span></p>
                 </div>
-                <div class="beneficiary-card">
+                <div class="beneficiary-card" data-tab="3">
                     <p class="beneficiary__name">Dad</p>
                     <p class="account__container">#<span class="account-number">2201804211</span></p>
                 </div>
@@ -175,7 +182,7 @@
                     <label for="accNo" class="transfer-label">Account Number:  
                         <input type="number" name="accNo" id="accNo" class="transfer-info__detail">
                     </label>
-                    <div class="name-box">Banigo Kenebebh Nadari</div>
+                    <div class="beneficiary-name">Banigo Kenebebh Nadari</div>
                     <label for="transfer-amount" class="transfer-label">Enter Amount:  
                         <input type="number" name="transfer-amount" id="transfer-amount" class="transfer-info__detail">
                     </label>
