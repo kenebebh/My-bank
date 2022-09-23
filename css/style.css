@@ -815,6 +815,13 @@ body {
 .beneficiary__container {
   width: 100%; }
 
+.beneficiary-name {
+  text-align: center;
+  border: 1px solid wheat;
+  width: 80%;
+  margin: 0 auto 1rem;
+  border-radius: 5px; }
+
 .beneficiary-card {
   width: 100%;
   border: 1px solid wheat;
@@ -837,12 +844,15 @@ body {
   text-align: center;
   font-size: 2rem; }
 
-.transfer-info__detail {
+.transfer-info__detail,
+#confirm-pin {
   height: 3rem;
   color: white;
   font-size: 1.5rem;
   padding: 0 0 0 1rem; }
-  .transfer-info__detail:active, .transfer-info__detail:focus {
+  .transfer-info__detail:active, .transfer-info__detail:focus,
+  #confirm-pin:active,
+  #confirm-pin:focus {
     outline: 1px solid wheat;
     border-radius: 2px; }
 

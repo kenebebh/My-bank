@@ -3,27 +3,38 @@ const setPinButton = document.querySelector(".setpin-button");
 const setPinContainer = document.querySelector(".pin-box__container");
 
 const backButton = document.querySelector(".back-button");
-const accountNumberEL = document.querySelector(".account-number");
 
 const transferPage1 = document.querySelector(".transfer-page1");
 const transferPage2 = document.querySelector(".transfer-page2");
 const transferPage3 = document.querySelector(".transfer-page3");
 const transferPage4 = document.querySelector(".transfer-page4");
 const transferPage5 = document.querySelector(".transfer-page5");
-let pageNumber = 1;
 
-let beneficiaryNameEL = document.querySelector(".beneficiary-name");
-let accNoEL = document.querySelector("#accNo");
-
-let beneficiaryName, accountNumber;
-
+const beneficiaryNameEL = document.querySelector(".beneficiary-name");
+const accNoEL = document.querySelector("#accNo");
 const TransferPinEL = document.querySelector(".pin1");
 const pin2EL = document.querySelector(".pin2");
-
 const displayMessageEL = document.querySelector(".no-proceed-message");
+const transferAmountEL = document.querySelector("#transfer-amount");
+const transferNarrationEL = document.querySelector("#transfer-narration");
+const receiverName = document.querySelector(".receiver-name");
+const amountSentEL = document.querySelector(".amount-sent");
+const descriptionEL = document.querySelector(".transfer-description");
+const enterPinEL = document.querySelector("#confirm-pin");
 
+let beneficiaryName,
+  accountNumber,
+  transferAmount,
+  transferNarration,
+  enteredPin;
 let passwordMatch = false;
+let pageNumber = 1;
+
 const transferPin = localStorage.getItem("transferPin");
+
+// const displayErrorMessage = function () {
+
+// }
 
 if (transferPin) {
   setPinContainer.classList.add("hidden");
@@ -95,7 +106,6 @@ transferPage2.addEventListener("click", function (e) {
   pageNumber = 2;
 
   const clicked = e.target.closest(".beneficiary-card");
-  console.log(clicked);
 
   if (clicked.classList.contains("beneficiary-card")) {
     if (clicked.dataset.tab == 1) {
@@ -111,30 +121,54 @@ transferPage2.addEventListener("click", function (e) {
     changeActivePage();
   }
 
-  // console.log(beneficiaryName);
-  // console.log(accountNumber);
+  //The effect of these two lines are actually seen in the next page
+  beneficiaryNameEL.textContent = beneficiaryName;
+  accNoEL.value = accountNumber;
 });
 
-console.log(beneficiaryName);
-console.log(accountNumber);
-
-beneficiaryNameEL.textContent = beneficiaryName;
-accNoEL.textContent = accountNumber;
+console.log(beneficiaryNameEL);
 
 transferPage3.addEventListener("click", function (e) {
   e.preventDefault();
   pageNumber = 3;
 
   if (e.target.classList.contains("send-money-1")) {
+    transferAmount = transferAmountEL.value;
+    transferNarration = transferNarrationEL.value;
     changeActivePage();
   }
+  // console.log(beneficiaryName);
+  receiverName.textContent = beneficiaryName;
+  amountSentEL.textContent = transferAmount;
+  descriptionEL.textContent = transferNarration;
 });
 
 transferPage4.addEventListener("click", function (e) {
   e.preventDefault();
   pageNumber = 4;
+  enteredPin = enterPinEL.value;
 
   if (e.target.classList.contains("confirm-transfer")) {
-    changeActivePage();
+    if (enteredPin === transferPin) {
+      changeActivePage();
+    } else if (enteredPin === "") {
+      displayMessageEL.textContent = `Please enter transaction pin`;
+      displayMessageEL.classList.remove("hidden");
+      setTimeout(() => {
+        displayMessageEL.classList.add("hidden");
+      }, 3000);
+    } else if (enteredPin !== transferPin) {
+      displayMessageEL.textContent = `Incorrect pin`;
+      displayMessageEL.classList.remove("hidden");
+      setTimeout(() => {
+        displayMessageEL.classList.add("hidden");
+      }, 3000);
+    } else {
+      displayMessageEL.textContent = `Sorry, an error occured`;
+      displayMessageEL.classList.remove("hidden");
+      setTimeout(() => {
+        displayMessageEL.classList.add("hidden");
+      }, 3000);
+    }
   }
 });
