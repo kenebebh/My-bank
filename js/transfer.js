@@ -29,6 +29,11 @@ let pageNumber = 1;
 
 const transferPin = localStorage.getItem("transferPin");
 
+if (transferPin) {
+  setPinContainer.classList.add("hidden");
+  transferPage1.classList.remove("hidden");
+}
+
 const displayErrorMessage = function () {
   displayMessageEL.classList.remove("hidden");
   setTimeout(() => {
@@ -68,18 +73,13 @@ const changeActivePage = function () {
 };
 
 backButton.addEventListener("click", function () {
-  location.href = "index.html";
+  location.href = "home.html";
 });
 
 setPinButton.addEventListener("click", function (e) {
   e.preventDefault();
   validateTransferPin();
 });
-
-if (transferPin) {
-  setPinContainer.classList.add("hidden");
-  transferPage1.classList.remove("hidden");
-}
 
 transferPage1.addEventListener("click", function (e) {
   e.preventDefault();
@@ -113,8 +113,6 @@ transferPage2.addEventListener("click", function (e) {
   beneficiaryNameEL.textContent = beneficiaryName;
   accNoEL.value = accountNumber;
 });
-
-console.log(beneficiaryNameEL);
 
 transferPage3.addEventListener("click", function (e) {
   e.preventDefault();

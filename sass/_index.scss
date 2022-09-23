@@ -40,7 +40,7 @@ a {
   color: $color-primary;
   letter-spacing: 0.5rem;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.8rem;
 }
 
 .login {
@@ -80,10 +80,10 @@ a {
 .login-button {
   cursor: pointer;
   width: 87%;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  text-align: center;
   font-family: inherit;
   margin: 2rem 0 0;
-  padding: 1rem 0;
   color: $color-primary-dark;
   background-color: $color-secondary;
   border-radius: 0.5rem;
@@ -200,7 +200,7 @@ a {
 }
 
 body {
-  transition: all 1s ease-in;
+  transition: all 0.2s ease-in;
   position: relative;
 }
 
@@ -377,7 +377,6 @@ body {
   border-radius: 2rem;
   color: #fff;
   margin: 0 auto 2rem;
-  // height: 28rem;
   height: fit-content;
   position: relative;
   line-height: 2rem;
@@ -487,7 +486,7 @@ body {
     margin: 2rem 0;
   }
   .login-button {
-    width: 85%;
+    width: 87%;
   }
 
   .login--footer {
