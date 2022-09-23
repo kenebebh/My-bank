@@ -22,59 +22,49 @@ const amountSentEL = document.querySelector(".amount-sent");
 const descriptionEL = document.querySelector(".transfer-description");
 const enterPinEL = document.querySelector("#confirm-pin");
 
-let beneficiaryName,
-  accountNumber,
-  transferAmount,
-  transferNarration,
-  enteredPin;
+// prettier-ignore
+let beneficiaryName, accountNumber, transferAmount, transferNarration, enteredPin;
 let passwordMatch = false;
 let pageNumber = 1;
 
 const transferPin = localStorage.getItem("transferPin");
 
-// const displayErrorMessage = function () {
-
-// }
-
-if (transferPin) {
-  setPinContainer.classList.add("hidden");
-  transferPage1.classList.remove("hidden");
-}
+const displayErrorMessage = function () {
+  displayMessageEL.classList.remove("hidden");
+  setTimeout(() => {
+    displayMessageEL.classList.add("hidden");
+  }, 3000);
+};
 
 const validateTransferPin = function () {
   let isFourDigits = /^[0-9]{4}$/.test(TransferPinEL.value);
 
-  if (
-    isFourDigits &&
-    TransferPinEL.value === pin2EL.value &&
-    !isNaN(TransferPinEL.value)
-  ) {
+  // prettier-ignore
+  if (isFourDigits && TransferPinEL.value === pin2EL.value && !isNaN(TransferPinEL.value)) {
     passwordMatch = true;
     setPinContainer.classList.add("hidden");
     transferPage1.classList.remove("hidden");
     localStorage.setItem("transferPin", `${TransferPinEL.value}`);
   } else if (!isFourDigits) {
     displayMessageEL.textContent = `password must be four digits`;
-    displayMessageEL.classList.remove("hidden");
-    setTimeout(() => {
-      displayMessageEL.classList.add("hidden");
-    }, 3000);
+    displayErrorMessage();
     passwordMatch = false;
   } else if (TransferPinEL.value != pin2EL.value) {
     displayMessageEL.textContent = `passwords don't match`;
-    displayMessageEL.classList.remove("hidden");
-    setTimeout(() => {
-      displayMessageEL.classList.add("hidden");
-    }, 3000);
+    displayErrorMessage();
     passwordMatch = false;
   } else {
     displayMessageEL.textContent = `Input must be numbers`;
-    displayMessageEL.classList.remove("hidden");
-    setTimeout(() => {
-      displayMessageEL.classList.add("hidden");
-    }, 3000);
+    displayErrorMessage();
     passwordMatch = false;
   }
+};
+
+const changeActivePage = function () {
+  document.querySelector(`.transfer-page${pageNumber}`).classList.add("hidden");
+  document
+    .querySelector(`.transfer-page${pageNumber + 1}`)
+    .classList.remove("hidden");
 };
 
 backButton.addEventListener("click", function () {
@@ -86,12 +76,10 @@ setPinButton.addEventListener("click", function (e) {
   validateTransferPin();
 });
 
-const changeActivePage = function () {
-  document.querySelector(`.transfer-page${pageNumber}`).classList.add("hidden");
-  document
-    .querySelector(`.transfer-page${pageNumber + 1}`)
-    .classList.remove("hidden");
-};
+if (transferPin) {
+  setPinContainer.classList.add("hidden");
+  transferPage1.classList.remove("hidden");
+}
 
 transferPage1.addEventListener("click", function (e) {
   e.preventDefault();
@@ -112,10 +100,10 @@ transferPage2.addEventListener("click", function (e) {
       beneficiaryName = `Banigo Kenebebh Nadari`;
       accountNumber = 3135254164;
     } else if (clicked.dataset.tab == 2) {
-      beneficiaryName = `First Lady`;
+      beneficiaryName = `Mum`;
       accountNumber = 300453217;
     } else {
-      beneficiaryName = `A strong man`;
+      beneficiaryName = `Dad`;
       accountNumber = 2201804211;
     }
     changeActivePage();
@@ -137,7 +125,6 @@ transferPage3.addEventListener("click", function (e) {
     transferNarration = transferNarrationEL.value;
     changeActivePage();
   }
-  // console.log(beneficiaryName);
   receiverName.textContent = beneficiaryName;
   amountSentEL.textContent = transferAmount;
   descriptionEL.textContent = transferNarration;
@@ -153,22 +140,13 @@ transferPage4.addEventListener("click", function (e) {
       changeActivePage();
     } else if (enteredPin === "") {
       displayMessageEL.textContent = `Please enter transaction pin`;
-      displayMessageEL.classList.remove("hidden");
-      setTimeout(() => {
-        displayMessageEL.classList.add("hidden");
-      }, 3000);
+      displayErrorMessage();
     } else if (enteredPin !== transferPin) {
       displayMessageEL.textContent = `Incorrect pin`;
-      displayMessageEL.classList.remove("hidden");
-      setTimeout(() => {
-        displayMessageEL.classList.add("hidden");
-      }, 3000);
+      displayErrorMessage();
     } else {
       displayMessageEL.textContent = `Sorry, an error occured`;
-      displayMessageEL.classList.remove("hidden");
-      setTimeout(() => {
-        displayMessageEL.classList.add("hidden");
-      }, 3000);
+      displayErrorMessage();
     }
   }
 });
