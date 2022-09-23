@@ -21,12 +21,14 @@ const receiverName = document.querySelector(".receiver-name");
 const amountSentEL = document.querySelector(".amount-sent");
 const descriptionEL = document.querySelector(".transfer-description");
 const enterPinEL = document.querySelector("#confirm-pin");
+const senderName = document.querySelector(".user-name");
 
 // prettier-ignore
 let beneficiaryName, accountNumber, transferAmount, transferNarration, enteredPin;
 let passwordMatch = false;
 let pageNumber = 1;
 
+const fullName = `${userDetails.firstName} ${userDetails.lastName}`;
 const transferPin = localStorage.getItem("transferPin");
 
 if (transferPin) {
@@ -126,6 +128,7 @@ transferPage3.addEventListener("click", function (e) {
   receiverName.textContent = beneficiaryName;
   amountSentEL.textContent = transferAmount;
   descriptionEL.textContent = transferNarration;
+  senderName.textContent = fullName;
 });
 
 transferPage4.addEventListener("click", function (e) {
