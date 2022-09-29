@@ -7,6 +7,10 @@ const closeIcon = document.querySelector(".close");
 const fullNameEL = document.querySelectorAll(".name");
 const timeOfDayEL = document.querySelector(".time-of-day");
 
+const accountBalance = document.querySelector(".card-account-balance");
+
+userDetails.movements = [];
+
 let greeting;
 const date = new Date();
 const hour = date.getHours();
@@ -24,12 +28,15 @@ const giveGreeting = function () {
 };
 
 giveGreeting();
-timeOfDayEL.textContent = greeting;
 
-fullNameEL.forEach(
-  (person) =>
-    (person.textContent = `${userDetails.firstName} ${userDetails.lastName}`)
-);
+const setNames = function () {
+  fullNameEL.forEach(
+    (person) =>
+      (person.textContent = `${userDetails.firstName} ${userDetails.lastName}`)
+  );
+};
+
+setNames();
 
 closeIcon.addEventListener("click", function () {
   closeOverlay();
@@ -55,3 +62,16 @@ overlay.addEventListener("click", function () {
   closeOverlay();
   hideNav();
 });
+
+timeOfDayEL.textContent = greeting;
+userDetails.movements[0] = 2000;
+
+console.log(userDetails.movements[0] == undefined);
+console.log(userDetails.movements);
+
+if (userDetails.movements[0] != undefined) {
+  accountBalance.textContent = userDetails.movements[0];
+}
+
+// userDetails.movements = [1, 2, 3];
+// console.log(userDetails.movements);

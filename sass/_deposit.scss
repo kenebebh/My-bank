@@ -1,0 +1,89 @@
+// .deposit-main {
+//   //   background-color: blue;
+//   height: 70%;
+// }
+
+// .deposit-form {
+//   height: 100%;
+//   //   background-color: red;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .deposit-form > * {
+//   height: 5rem;
+// }
+
+// .deposit-form > * {
+//   height: 50rem;
+// }
+
+.deposit-content {
+  height: 100%;
+  border: 1px solid $color-whitish-green;
+  border-radius: 2rem;
+  padding: 0 3rem;
+}
+
+.deposit-main {
+  position: absolute;
+  top: 20%;
+  width: 80%;
+  background-color: $color-primary-dark;
+  box-shadow: 0.1rem 0.1rem 5rem #dfb3f181;
+
+  height: 25rem;
+  border-radius: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.deposit-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.deposit-text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.deposit-amount {
+  width: 90%;
+  margin: 2rem auto 0;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid $color-primary-dark;
+  border-radius: 5px;
+
+  &:active,
+  &:focus {
+    outline: 2px solid $color-brown;
+  }
+}
+
+.deposit-button {
+  width: 50%;
+  margin: 4rem auto 0;
+  font-size: 1.8rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  border: 1px solid $color-primary-dark;
+  border-radius: 8px;
+  box-shadow: 0.1rem 0.1rem 20rem #729787af;
+  background-color: #ffffff;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    color: rgb(61, 42, 42);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

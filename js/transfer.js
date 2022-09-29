@@ -31,6 +31,10 @@ let pageNumber = 1;
 const fullName = `${userDetails.firstName} ${userDetails.lastName}`;
 const transferPin = localStorage.getItem("transferPin");
 
+backButton.addEventListener("click", function () {
+  location.href = "home.html";
+});
+
 if (transferPin) {
   setPinContainer.classList.add("hidden");
   transferPage1.classList.remove("hidden");
@@ -73,10 +77,6 @@ const changeActivePage = function () {
     .querySelector(`.transfer-page${pageNumber + 1}`)
     .classList.remove("hidden");
 };
-
-backButton.addEventListener("click", function () {
-  location.href = "home.html";
-});
 
 setPinButton.addEventListener("click", function (e) {
   e.preventDefault();

@@ -148,6 +148,62 @@ body {
   .bills__list {
     top: 8rem; } }
 
+.deposit-content {
+  height: 100%;
+  border: 1px solid #026b3e52;
+  border-radius: 2rem;
+  padding: 0 3rem; }
+
+.deposit-main {
+  position: absolute;
+  top: 20%;
+  width: 80%;
+  background-color: #2f7557;
+  box-shadow: 0.1rem 0.1rem 5rem #dfb3f181;
+  height: 25rem;
+  border-radius: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.deposit-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.deposit-text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold; }
+
+.deposit-amount {
+  width: 90%;
+  margin: 2rem auto 0;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #2f7557;
+  border-radius: 5px; }
+  .deposit-amount:active, .deposit-amount:focus {
+    outline: 2px solid #884d0496; }
+
+.deposit-button {
+  width: 50%;
+  margin: 4rem auto 0;
+  font-size: 1.8rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  border: 1px solid #2f7557;
+  border-radius: 8px;
+  box-shadow: 0.1rem 0.1rem 20rem #729787af;
+  background-color: #ffffff;
+  transition: transform 0.2s ease-out; }
+  .deposit-button:hover {
+    transform: translateY(-0.2rem);
+    color: #3d2a2a; }
+  .deposit-button:active {
+    transform: translateY(0); }
+
 .login-page {
   padding: 5rem;
   border-radius: 3rem;
@@ -198,7 +254,7 @@ a {
   border: 1px solid #2f7557;
   border-radius: 5px; }
   .input-field:active, .input-field:focus {
-    border: 1px solid #2f7557; }
+    outline: 1px solid #2f7557; }
   .input-field::-webkit-input-placeholder {
     color: #2f7557; }
 
@@ -315,14 +371,16 @@ body {
   backface-visibility: hidden;
   height: 100vh; }
 
-.index-container {
+.index-container,
+.deposit-container {
   position: relative;
   z-index: 100;
   display: flex;
   justify-content: space-evenly;
   align-content: center; }
 
-.dashboard-container {
+.dashboard-container,
+.deposit-content {
   transition: all 1s;
   width: 50rem;
   position: relative;

@@ -59,7 +59,7 @@ a {
 
   &:active,
   &:focus {
-    border: 1px solid $color-primary-dark;
+    outline: 1px solid $color-primary-dark;
   }
 
   &::-webkit-input-placeholder {
@@ -210,7 +210,8 @@ body {
   height: 100vh;
 }
 
-.index-container {
+.index-container,
+.deposit-container {
   position: relative;
   z-index: 100;
   display: flex;
@@ -218,7 +219,8 @@ body {
   align-content: center;
 }
 
-.dashboard-container {
+.dashboard-container,
+.deposit-content {
   transition: all 1s;
   width: 50rem;
   position: relative;
