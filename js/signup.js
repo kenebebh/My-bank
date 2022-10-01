@@ -31,7 +31,6 @@ signUpButton.addEventListener("click", function (e) {
     setTimeout(() => {
       errorMessageEL.classList.add("hidden");
     }, 3000);
-    console.log(`passwords dont match`);
   }
 });
 

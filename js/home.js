@@ -7,6 +7,7 @@ const closeIcon = document.querySelector(".close");
 const fullNameEL = document.querySelectorAll(".name");
 const timeOfDayEL = document.querySelector(".time-of-day");
 const dateEL = document.querySelector(".date");
+const movements = [];
 
 const accountBalance = document.querySelector(".card-account-balance");
 
@@ -14,11 +15,9 @@ const now = new Date();
 const year = now.getFullYear();
 const month = `${now.getMonth() + 1}`.padStart(2, 0);
 const day = `${now.getDate()}`.padStart(2, 0);
-dateEL.textContent = `${day}/${month}/${year}`;
 
 // localStorage.removeItem("movements");
 
-const movements = [];
 userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 
 let greeting;
@@ -74,14 +73,18 @@ overlay.addEventListener("click", function () {
 });
 
 timeOfDayEL.textContent = greeting;
+dateEL.textContent = `${day}/${month}/${year}`;
 
 // userDetails.movements[0] = 2000;
 
 // console.log(userDetails.movements[0] == undefined);
+const calcBalance = function (movs) {
+  const balance = movs.reduce((acc, mov) => acc + parseFloat(mov), 0);
+  accountBalance.textContent = balance;
+};
 
 if (userDetails.movements[0] != undefined) {
-  accountBalance.textContent = userDetails.movements[0];
+  // console.log(movements);
+  calcBalance(userDetails.movements);
+  // accountBalance.textContent = userDetails.movements[0];
 }
-
-console.log(userDetails.movements);
-console.log([20, 10, 15]);
