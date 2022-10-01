@@ -37,3 +37,10 @@ const validateLogin = function () {
     displayErrorMessage2();
   }
 };
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    validateLogin();
+  }
+});

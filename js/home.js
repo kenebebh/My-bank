@@ -9,7 +9,10 @@ const timeOfDayEL = document.querySelector(".time-of-day");
 
 const accountBalance = document.querySelector(".card-account-balance");
 
-userDetails.movements = [];
+// localStorage.removeItem("movements");
+
+const movements = [];
+userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 
 let greeting;
 const date = new Date();
@@ -64,14 +67,14 @@ overlay.addEventListener("click", function () {
 });
 
 timeOfDayEL.textContent = greeting;
-userDetails.movements[0] = 2000;
 
-console.log(userDetails.movements[0] == undefined);
-console.log(userDetails.movements);
+// userDetails.movements[0] = 2000;
+
+// console.log(userDetails.movements[0] == undefined);
 
 if (userDetails.movements[0] != undefined) {
   accountBalance.textContent = userDetails.movements[0];
 }
 
-// userDetails.movements = [1, 2, 3];
-// console.log(userDetails.movements);
+console.log(userDetails.movements);
+console.log([20, 10, 15]);
