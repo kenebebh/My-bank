@@ -53,40 +53,6 @@ body {
   font-size: 0.5rem;
   fill: #729787; }
 
-.balance-enquiry__container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3rem; }
-
-.balance__container {
-  background-color: #447f66;
-  width: 70%;
-  font-size: 1.8rem;
-  padding: 3rem 2rem 3rem;
-  border-radius: 2rem;
-  color: #fff;
-  text-shadow: 10rem 10rem 10rem red;
-  margin: 0 auto 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 15rem; }
-
-.balance-heading {
-  color: #2f7557;
-  margin-bottom: 2rem; }
-
-@media only screen and (min-width: 37.5em) {
-  .balance-enquiry__container {
-    width: 80%;
-    margin: 0 auto; }
-  .balance__container {
-    padding: 2rem;
-    height: 20rem; } }
-
 .bill__icon {
   width: 2rem;
   margin-right: 1rem; }
@@ -218,6 +184,67 @@ body {
     color: #3d2a2a; }
   .deposit-button:active {
     transform: translateY(0); }
+
+.history-container {
+  border: 1px solid #026b3e52;
+  height: 95vh;
+  padding: 0 2rem 0;
+  border-radius: 2rem;
+  position: relative;
+  width: 50rem;
+  overflow: hidden;
+  margin: 0 auto; }
+
+/* MOVEMENTS */
+.movements {
+  position: absolute;
+  top: 15%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 1rem; }
+
+.movements__row {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee; }
+
+.movements__type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem; }
+
+.movements__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666; }
+
+.movements__type--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d); }
+
+.movements__type--withdrawal {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f); }
+
+.movements__value {
+  font-size: 1.7rem;
+  margin-left: auto; }
+
+@media only screen and (max-width: 37.5em) {
+  .history-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    left: 0;
+    border: none;
+    border-radius: 0; } }
 
 .login-page {
   padding: 5rem;
