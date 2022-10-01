@@ -6,8 +6,15 @@ const body = document.querySelector(".main");
 const closeIcon = document.querySelector(".close");
 const fullNameEL = document.querySelectorAll(".name");
 const timeOfDayEL = document.querySelector(".time-of-day");
+const dateEL = document.querySelector(".date");
 
 const accountBalance = document.querySelector(".card-account-balance");
+
+const now = new Date();
+const year = now.getFullYear();
+const month = `${now.getMonth() + 1}`.padStart(2, 0);
+const day = `${now.getDate()}`.padStart(2, 0);
+dateEL.textContent = `${day}/${month}/${year}`;
 
 // localStorage.removeItem("movements");
 

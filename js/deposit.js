@@ -12,12 +12,6 @@ const pushMovement = function (mov) {
   console.log(userDetails.movements);
 };
 
-// pushMovement(12);
-// pushMovement(100);
-// pushMovement(25);
-// pushMovement(15);
-// pushMovement(1200);
-
 backButton.addEventListener("click", function () {
   location.href = "home.html";
 });
