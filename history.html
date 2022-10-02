@@ -102,19 +102,33 @@
                     </svg>
         </div>
 
-        <main class='main'>        
+        <main class='main'>
+            <div class="display-header">
+                <p class="display-header__info">
+                    Hello <span class="name">Kene, </span> Your balance is: 
+                </p>
+                <p class="balance">3000</p>
+            </div>
+
       <div class="movements">
         <div class="movements__row">
-          <div class="movements__type movements__type--deposit">2 deposit</div>
-          <div class="movements__date">3 days ago</div>
-          <div class="movements__value">4 000€</div>
+          <div class="movements__type movements__type--deposit">
+            <img src="assets/arrow-up2.svg" alt="Deposit" class="">
+            </div>
+            <div class="movements__info">
+                <div class="movements__description">You deposited 5000</div>
+                <div class="movements__date">3 days ago</div>
+            </div>
+          <div class="movements__value deposit-value">5 000</div>
         </div>
         <div class="movements__row">
           <div class="movements__type movements__type--withdrawal">
-            1 withdrawal
+            <img src="assets/arrow-down2.svg" alt="Withdraw" class="">
           </div>
-          <div class="movements__date">24/01/2037</div>
-          <div class="movements__value">-378€</div>
+          <div class="movements__info">
+            <div class="movements__description">You transferred 2000</div>
+            <div class="movements__date">24/01/2002</div>
+        </div>          <div class="movements__value withdraw-value">-2000</div>
         </div>
       </div>
     </main>

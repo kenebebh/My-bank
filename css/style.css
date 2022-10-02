@@ -195,10 +195,21 @@ body {
   overflow: hidden;
   margin: 0 auto; }
 
+.display-header {
+  position: absolute;
+  top: 8%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.balance {
+  font-size: 3rem; }
+
 /* MOVEMENTS */
 .movements {
   position: absolute;
-  top: 15%;
+  top: 17%;
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
@@ -208,30 +219,31 @@ body {
 .movements__row {
   padding: 2rem 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee; }
 
 .movements__type {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #fff;
-  padding: 0.1rem 1rem;
-  border-radius: 10rem;
+  background-color: #f5f4f4;
+  padding: 1.2rem;
+  border-radius: 50%;
+  display: flex;
   margin-right: 2rem; }
+
+.movements__info {
+  line-height: 2; }
 
 .movements__date {
   font-size: 1.1rem;
   text-transform: uppercase;
-  font-weight: 500;
-  color: #666; }
+  font-weight: 300;
+  color: #666;
+  font-weight: bold; }
 
-.movements__type--deposit {
-  background-image: linear-gradient(to top left, #39b385, #9be15d); }
+.deposit-value {
+  color: #447f66; }
 
-.movements__type--withdrawal {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f); }
+.withdraw-value {
+  color: rgba(235, 31, 109, 0.753); }
 
 .movements__value {
   font-size: 1.7rem;
