@@ -14,11 +14,11 @@ const displayTransferMessage = function (message) {
 };
 
 const pushMovement = function (mov) {
+  // mov > 0 ? movements.push(mov) : movements.push(-mov);
   movements.push(mov);
   localStorage.setItem("movements", JSON.stringify(movements));
   userDetails.movements = JSON.parse(localStorage.getItem("movements"));
-  // console.log(movements);
-  console.log(userDetails.movements);
+  console.log(movements);
 };
 
 backButton.addEventListener("click", function () {

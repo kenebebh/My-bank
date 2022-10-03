@@ -22,6 +22,9 @@ const amountSentEL = document.querySelector(".amount-sent");
 const descriptionEL = document.querySelector(".transfer-description");
 const enterPinEL = document.querySelector("#confirm-pin");
 const senderName = document.querySelector(".user-name");
+let movements = [];
+movements = JSON.parse(localStorage.getItem("movements"));
+userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 
 // prettier-ignore
 let beneficiaryName, accountNumber, transferAmount, transferNarration, enteredPin;
@@ -34,6 +37,13 @@ const transferPin = localStorage.getItem("transferPin");
 backButton.addEventListener("click", function () {
   location.href = "home.html";
 });
+
+const pushMovement = function (mov) {
+  movements.push(-mov);
+  console.log(movements);
+  localStorage.setItem("movements", JSON.stringify(movements));
+  userDetails.movements = JSON.parse(localStorage.getItem("movements"));
+};
 
 if (transferPin) {
   setPinContainer.classList.add("hidden");
@@ -122,6 +132,7 @@ transferPage3.addEventListener("click", function (e) {
 
   if (e.target.classList.contains("send-money-1")) {
     transferAmount = transferAmountEL.value;
+    pushMovement(transferAmount);
     transferNarration = transferNarrationEL.value;
     changeActivePage();
   }
@@ -129,6 +140,7 @@ transferPage3.addEventListener("click", function (e) {
   amountSentEL.textContent = transferAmount;
   descriptionEL.textContent = transferNarration;
   senderName.textContent = fullName;
+  console.log(userDetails.movements);
 });
 
 transferPage4.addEventListener("click", function (e) {

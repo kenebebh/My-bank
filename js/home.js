@@ -7,7 +7,7 @@ const closeIcon = document.querySelector(".close");
 const fullNameEL = document.querySelectorAll(".name");
 const timeOfDayEL = document.querySelector(".time-of-day");
 const dateEL = document.querySelector(".date");
-const movements = [];
+let movements = [];
 
 const accountBalance = document.querySelector(".card-account-balance");
 
@@ -17,7 +17,7 @@ const month = `${now.getMonth() + 1}`.padStart(2, 0);
 const day = `${now.getDate()}`.padStart(2, 0);
 
 // localStorage.removeItem("movements");
-
+movements = JSON.parse(localStorage.getItem("movements"));
 userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 
 let greeting;
