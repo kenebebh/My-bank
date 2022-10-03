@@ -84,7 +84,5 @@ const calcBalance = function (movs) {
 };
 
 if (userDetails.movements[0] != undefined) {
-  // console.log(movements);
   calcBalance(userDetails.movements);
-  // accountBalance.textContent = userDetails.movements[0];
 }
