@@ -1,4 +1,4 @@
-const backButton = document.querySelector(".back-button");
+// const backButton = document.querySelector(".back-button");
 const containerMovements = document.querySelector(".movements");
 const firstnameEL = document.querySelector(".name");
 const balanceEL = document.querySelector(".balance");
@@ -7,20 +7,15 @@ userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 
 firstnameEL.textContent = userDetails.firstName;
 
-backButton.addEventListener("click", function () {
-  location.href = "home.html";
-});
+// backButton.addEventListener("click", function () {
+//   location.href = "home.html";
+// });
 
 const calcBalance2 = function (movs) {
   const balance = movs.reduce((acc, mov) => acc + parseFloat(mov), 0);
   balanceEL.textContent = balance;
 };
 calcBalance2(userDetails.movements);
-
-// let type = "deposit";
-// let movDesc =
-//   type == "deposit" ? `You deposited money` : `You transferred money`;
-// console.log(movDesc);
 
 const displayMovements = function (movs) {
   containerMovements.innerHTML = "";
@@ -34,7 +29,6 @@ const displayMovements = function (movs) {
       type == "deposit"
         ? `You deposited ${mov}`
         : `You transferred ${positiveMovText}`;
-    console.log(movDesc);
 
     const html = `
       <div class="movements__row">
@@ -54,3 +48,7 @@ const displayMovements = function (movs) {
 };
 
 displayMovements(userDetails.movements);
+
+console.log(beneficiaryDetails);
+
+// console.log(beneficiaryName);

@@ -23,9 +23,13 @@ const descriptionEL = document.querySelector(".transfer-description");
 const enterPinEL = document.querySelector("#confirm-pin");
 const senderName = document.querySelector(".user-name");
 const cancelTransferButton = document.querySelector(".cancel-transfer-text");
-let movements = [];
-movements = JSON.parse(localStorage.getItem("movements"));
+let movements2 = [];
+movements2 = JSON.parse(localStorage.getItem("movements"));
 userDetails.movements = JSON.parse(localStorage.getItem("movements"));
+
+let beneficiaryDetails = {
+  beneficiaryName: "",
+};
 
 // prettier-ignore
 let beneficiaryName, accountNumber, transferAmount, transferNarration, enteredPin;
@@ -40,16 +44,11 @@ backButton.addEventListener("click", function () {
 });
 
 const pushMovement = function (mov) {
-  movements.push(-mov);
-  console.log(movements);
-  localStorage.setItem("movements", JSON.stringify(movements));
+  movements2.push(-mov);
+  console.log(movements2);
+  localStorage.setItem("movements", JSON.stringify(movements2));
   userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 };
-
-if (transferPin) {
-  setPinContainer.classList.add("hidden");
-  transferPage1.classList.remove("hidden");
-}
 
 const displayErrorMessage = function () {
   displayMessageEL.classList.remove("hidden");
@@ -88,6 +87,11 @@ const changeActivePage = function () {
     .querySelector(`.transfer-page${pageNumber + 1}`)
     .classList.remove("hidden");
 };
+
+if (transferPin) {
+  setPinContainer.classList.add("hidden");
+  transferPage1.classList.remove("hidden");
+}
 
 setPinButton.addEventListener("click", function (e) {
   e.preventDefault();
@@ -142,10 +146,11 @@ transferPage3.addEventListener("click", function (e) {
     changeActivePage();
   }
   receiverName.textContent = beneficiaryName;
+  beneficiaryDetails.beneficiaryName = beneficiaryName;
   amountSentEL.textContent = transferAmount;
   descriptionEL.textContent = transferNarration;
   senderName.textContent = fullName;
-  console.log(userDetails.movements);
+  console.log(beneficiaryDetails);
 });
 
 transferPage4.addEventListener("click", function (e) {
