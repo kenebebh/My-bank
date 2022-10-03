@@ -240,9 +240,9 @@ body {
   font-weight: bold; }
 
 .deposit-value {
-  color: #447f66; }
+  color: #39b995; }
 
-.withdraw-value {
+.withdrawal-value {
   color: rgba(235, 31, 109, 0.753); }
 
 .movements__value {

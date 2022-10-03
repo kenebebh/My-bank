@@ -131,7 +131,7 @@ transferPage3.addEventListener("click", function (e) {
   e.preventDefault();
   pageNumber = 3;
 
-  cancelTransferButton.addEventListener("click", function (e) {
+  cancelTransferButton.addEventListener("click", function () {
     location.href = "transfer.html";
   });
 

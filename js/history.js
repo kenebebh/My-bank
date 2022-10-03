@@ -29,8 +29,11 @@ const displayMovements = function (movs) {
     const type = mov > 0 ? "deposit" : "withdrawal";
     let imgSrc =
       type == "deposit" ? "assets/arrow-up2.svg" : "assets/arrow-down2.svg";
+    let positiveMovText = Math.abs(mov);
     let movDesc =
-      type == "deposit" ? `You deposited ${mov}` : `You transferred ${mov}`;
+      type == "deposit"
+        ? `You deposited ${mov}`
+        : `You transferred ${positiveMovText}`;
     console.log(movDesc);
 
     const html = `
@@ -42,7 +45,7 @@ const displayMovements = function (movs) {
             <div class="movements__description">${movDesc}</div>
             <div class="movements__date">3 days ago</div>
         </div>
-      <div class="movements__value deposit-value">${mov}</div>
+      <div class="movements__value ${type}-value">${mov}</div>
     </div>
       `;
 
