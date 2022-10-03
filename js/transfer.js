@@ -22,6 +22,7 @@ const amountSentEL = document.querySelector(".amount-sent");
 const descriptionEL = document.querySelector(".transfer-description");
 const enterPinEL = document.querySelector("#confirm-pin");
 const senderName = document.querySelector(".user-name");
+const cancelTransferButton = document.querySelector(".cancel-transfer-text");
 let movements = [];
 movements = JSON.parse(localStorage.getItem("movements"));
 userDetails.movements = JSON.parse(localStorage.getItem("movements"));
@@ -130,9 +131,13 @@ transferPage3.addEventListener("click", function (e) {
   e.preventDefault();
   pageNumber = 3;
 
+  cancelTransferButton.addEventListener("click", function (e) {
+    location.href = "transfer.html";
+  });
+
   if (e.target.classList.contains("send-money-1")) {
     transferAmount = transferAmountEL.value;
-    pushMovement(transferAmount);
+    // pushMovement(transferAmount);
     transferNarration = transferNarrationEL.value;
     changeActivePage();
   }
@@ -150,6 +155,7 @@ transferPage4.addEventListener("click", function (e) {
 
   if (e.target.classList.contains("confirm-transfer")) {
     if (enteredPin === transferPin) {
+      pushMovement(transferAmount);
       changeActivePage();
     } else if (enteredPin === "") {
       displayMessageEL.textContent = `Please enter transaction pin`;
