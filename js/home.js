@@ -87,10 +87,6 @@ if (userDetails.movements[0] != undefined) {
   calcBalance(userDetails.movements);
 }
 
-const deposits = movements.filter((depo) => depo > 0);
-const withdrawals = movements.filter((withdrawValue) => withdrawValue < 0);
-console.log(withdrawals);
-
 const allDebits = movements
   .filter((mov) => mov < 0)
   .reduce((acc, mov) => acc + Math.abs(mov), 0);

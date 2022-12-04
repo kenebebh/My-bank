@@ -21,7 +21,6 @@ const pushMovement = function (mov) {
   movements3.push(+mov);
   localStorage.setItem("movements", JSON.stringify(movements3));
   userDetails.movements = JSON.parse(localStorage.getItem("movements"));
-  console.log(movements3);
 };
 
 backButton.addEventListener("click", function () {

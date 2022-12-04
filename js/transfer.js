@@ -45,7 +45,6 @@ backButton.addEventListener("click", function () {
 
 const pushMovement = function (mov) {
   movements2.push(-mov);
-  console.log(movements2);
   localStorage.setItem("movements", JSON.stringify(movements2));
   userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 };
@@ -150,7 +149,6 @@ transferPage3.addEventListener("click", function (e) {
   amountSentEL.textContent = transferAmount;
   descriptionEL.textContent = transferNarration;
   senderName.textContent = fullName;
-  console.log(beneficiaryDetails);
 });
 
 transferPage4.addEventListener("click", function (e) {
