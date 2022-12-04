@@ -2,6 +2,9 @@ const depositAmountEL = document.querySelector(".deposit-amount");
 const depositButton = document.querySelector(".deposit-button");
 const backButton = document.querySelector(".back-button");
 const depositMessageEL = document.querySelector(".deposit-message-container");
+let movements3 = [];
+// movements3 = JSON.parse(localStorage.getItem("movements"));
+// userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 
 // localStorage.removeItem("movements");
 
@@ -15,10 +18,10 @@ const displayTransferMessage = function (message) {
 
 const pushMovement = function (mov) {
   // mov > 0 ? movements.push(mov) : movements.push(-mov);
-  movements.push(mov);
-  localStorage.setItem("movements", JSON.stringify(movements));
+  movements3.push(+mov);
+  localStorage.setItem("movements", JSON.stringify(movements3));
   userDetails.movements = JSON.parse(localStorage.getItem("movements"));
-  console.log(movements);
+  console.log(movements3);
 };
 
 backButton.addEventListener("click", function () {

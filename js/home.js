@@ -86,3 +86,51 @@ const calcBalance = function (movs) {
 if (userDetails.movements[0] != undefined) {
   calcBalance(userDetails.movements);
 }
+
+const deposits = movements.filter((depo) => depo > 0);
+const withdrawals = movements.filter((withdrawValue) => withdrawValue < 0);
+console.log(withdrawals);
+
+const allDebits = movements
+  .filter((mov) => mov < 0)
+  .reduce((acc, mov) => acc + Math.abs(mov), 0);
+
+const allCredits = movements
+  .filter((mov) => mov > 0)
+  .reduce((acc, mov) => acc + Math.abs(mov), 0);
+
+// const positiveDebits =
+///////////////////////////////////////////////////
+//Code for the chart
+
+var data = [
+  {
+    values: [allCredits, allDebits],
+    labels: ["Credits", "Debits"],
+    name: "",
+    hoverinfo: "label+percent+name",
+    hole: 0.4,
+    type: "pie",
+  },
+];
+
+var layout = {
+  title: "",
+  annotations: [
+    {
+      font: {
+        size: 20,
+      },
+      showarrow: false,
+      text: "Stats",
+      x: 0.5,
+      y: 0.5,
+    },
+  ],
+  height: 400,
+  width: 600,
+  showlegend: false,
+  // grid: { rows: 1, columns: 1 },
+};
+
+Plotly.newPlot("myDiv", data, layout);

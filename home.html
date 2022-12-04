@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Surge</title>
 
-    <script src="js/script.js" defer></script>
+    <script defer src="js/script.js"></script>
     <script defer src="js/home.js"></script>
+    <!-- <script defer src="js/chart.js"></script> -->
+
+    <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
 </head>
 <body>
     <div class="index-container">
@@ -201,7 +204,8 @@
                     </select> -->
                     </div>
                     <div class="statistics__content">
-                        <img src="piechart.jpeg" alt="piechart">
+                        <!-- <img src="piechart.jpeg" alt="piechart"> -->
+                        <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
                     </div>
                 </div>
             </div>
