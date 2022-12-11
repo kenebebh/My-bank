@@ -3,8 +3,8 @@ const depositButton = document.querySelector(".deposit-button");
 const backButton = document.querySelector(".back-button");
 const depositMessageEL = document.querySelector(".deposit-message-container");
 let movements3 = [];
-// movements3 = JSON.parse(localStorage.getItem("movements"));
-// userDetails.movements = JSON.parse(localStorage.getItem("movements"));
+movements3 = JSON.parse(localStorage.getItem("movements"));
+userDetails.movements = JSON.parse(localStorage.getItem("movements"));
 
 // localStorage.removeItem("movements");
 

@@ -23,6 +23,9 @@ const descriptionEL = document.querySelector(".transfer-description");
 const enterPinEL = document.querySelector("#confirm-pin");
 const senderName = document.querySelector(".user-name");
 const cancelTransferButton = document.querySelector(".cancel-transfer-text");
+
+let balance;
+
 let movements2 = [];
 movements2 = JSON.parse(localStorage.getItem("movements"));
 userDetails.movements = JSON.parse(localStorage.getItem("movements"));
@@ -54,6 +57,10 @@ const displayErrorMessage = function () {
   setTimeout(() => {
     displayMessageEL.classList.add("hidden");
   }, 3000);
+};
+
+const calcBalance = function (movs) {
+  balance = movs.reduce((acc, mov) => acc + parseFloat(mov), 0);
 };
 
 const validateTransferPin = function () {
@@ -155,11 +162,18 @@ transferPage4.addEventListener("click", function (e) {
   e.preventDefault();
   pageNumber = 4;
   enteredPin = enterPinEL.value;
+  calcBalance(userDetails.movements);
 
   if (e.target.classList.contains("confirm-transfer")) {
-    if (enteredPin === transferPin) {
+    if (enteredPin === transferPin && balance - transferAmount >= 0) {
       pushMovement(transferAmount);
       changeActivePage();
+    } else if (balance - transferAmount <= 0) {
+      displayMessageEL.textContent = `Insufficient balance`;
+      displayErrorMessage();
+    } else if (transferAmount <= 0) {
+      displayMessageEL.textContent = `Please enter a valid amount`;
+      displayErrorMessage();
     } else if (enteredPin === "") {
       displayMessageEL.textContent = `Please enter transaction pin`;
       displayErrorMessage();
